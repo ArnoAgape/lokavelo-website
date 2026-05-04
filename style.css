@@ -730,6 +730,14 @@ nav a:hover,
 
 /* ───────────────────────── LEGAL & CONTACT PAGES ───────────────────────── */
 
+.page-hero {
+  min-height: auto;
+  padding: 126px 1.4rem 2.4rem;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+}
+
 .hero-tag {
   display: inline-flex;
   align-items: center;
@@ -1053,6 +1061,12 @@ footer a:hover,
 }
 
 /* ───────────────────────── RESPONSIVE ───────────────────────── */
+
+@media (max-width: 860px) {
+  .page-hero {
+    padding-top: 102px;
+  }
+}
 
 @media (max-width: 860px) {
   header,
