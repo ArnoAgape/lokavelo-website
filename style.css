@@ -495,10 +495,10 @@ nav a:hover,
   text-transform: uppercase;
 }
 
-/* Corrige le bouton Contact dans les cartes CTA finales */
+/* Corrige le bouton dans les cartes CTA finales */
 .faq-cta-card .btn-android {
-  margin-right: 1.8rem;
   flex-shrink: 0;
+  margin-left: auto;
 }
 
 /* Retire les petites décorations latérales uniquement dans les CTA finales */
@@ -1035,7 +1035,7 @@ ol {
 
 .about-hero {
   min-height: auto;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .about-card p + p {
@@ -1095,7 +1095,7 @@ ol {
 
 .about-section {
   background: transparent;
-  padding: 5.5rem 1.4rem;
+  padding: 3rem 1.4rem;
   position: relative;
   overflow: visible;
 }
@@ -1203,7 +1203,23 @@ ol {
 
 @media (max-width: 520px) {
   .about-section {
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
+  }
+
+  .about-hero {
+    padding-bottom: 2.5rem;
+  }
+
+  #qui {
+    padding-top: 1.5rem;
+  }
+
+  #avenir {
+    padding-bottom: 1rem;
+  }
+
+  #avenir + .faq-cta {
+    padding-top: 1rem;
   }
 
   .about-photo-card,
@@ -1212,6 +1228,25 @@ ol {
   .about-value-card {
     border-radius: 22px;
   }
+}
+
+
+/* Espacements compacts sur la page À propos */
+
+#qui {
+  padding-top: 2rem;
+}
+
+#avenir {
+  padding-bottom: 1.5rem;
+}
+
+#avenir + .faq-cta {
+  padding-top: 1.5rem;
+}
+
+.faq-cta {
+  padding-bottom: 4rem;
 }
 
 /* ───────────────────────── FOOTER ───────────────────────── */
@@ -1262,9 +1297,7 @@ footer a:hover,
     padding-top: 84px;
     padding-bottom: 1.4rem;
   }
-}
 
-@media (max-width: 860px) {
   header,
   .site-header {
     height: 66px;
@@ -1295,6 +1328,10 @@ footer a:hover,
   .faq-cta-card {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .faq-cta-card .btn-android {
+    margin-left: 0;
   }
 
   .feat-pill {
