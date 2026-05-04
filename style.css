@@ -1442,3 +1442,115 @@ footer a:hover,
     padding: 1.1rem;
   }
 }
+
+/* ───────────────────────── ABOUT PAGE OVERRIDES ───────────────────────── */
+
+/* Réduit vraiment les espaces entre les sections de la page À propos */
+.hero.about-hero {
+  min-height: auto !important;
+  padding-bottom: 2rem !important;
+}
+
+.about-section {
+  padding-top: 2.25rem !important;
+  padding-bottom: 2.25rem !important;
+}
+
+.about-section + .about-section {
+  padding-top: 2rem !important;
+}
+
+#qui {
+  padding-top: 1.25rem !important;
+}
+
+#avenir {
+  padding-bottom: 1.25rem !important;
+}
+
+#avenir + .faq-cta {
+  padding-top: 1rem !important;
+  padding-bottom: 3rem !important;
+}
+
+/* Donne plus de place à l'encadré texte de "Qui je suis" */
+.about-grid-wide {
+  grid-template-columns: minmax(210px, 0.55fr) minmax(0, 1.45fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.about-intro {
+  max-width: 360px;
+}
+
+/* Carte avec photo + texte */
+.about-card-with-photo {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.about-card-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  border-radius: 22px;
+  box-shadow: 0 14px 28px rgba(18, 63, 145, 0.14);
+}
+
+.about-card-text p + p {
+  margin-top: 1rem;
+}
+
+/* Images optionnelles dans les autres encadrés */
+.about-step-image,
+.about-value-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+  box-shadow: 0 12px 24px rgba(18, 63, 145, 0.12);
+}
+
+@media (max-width: 860px) {
+  .about-grid-wide,
+  .about-card-with-photo {
+    grid-template-columns: 1fr;
+  }
+
+  .about-intro {
+    max-width: none;
+  }
+
+  .about-card-photo {
+    max-height: 360px;
+    aspect-ratio: 16 / 10;
+  }
+}
+
+@media (max-width: 520px) {
+  .hero.about-hero {
+    padding-bottom: 1.5rem !important;
+  }
+
+  .about-section {
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+
+  #qui {
+    padding-top: 1rem !important;
+  }
+
+  #avenir + .faq-cta {
+    padding-top: 0.75rem !important;
+  }
+
+  .about-card-with-photo {
+    gap: 1rem;
+  }
+}
