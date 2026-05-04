@@ -28,31 +28,45 @@
 </div>
 
 <div class="container">
-  <section>
-    <h2>Contacter LokaVélo</h2>
-    <p>Pour toute question concernant l’application, une location, ton compte ou les documents légaux, tu peux écrire à LokaVélo.</p>
+<section>
+  <h2>Contacter LokaVélo</h2>
+  <p>
+    Pour toute question concernant l’application, une location, ton compte
+    ou les documents légaux, tu peux envoyer un message via ce formulaire.
+  </p>
 
-    <div class="highlight-box">
-      Adresse de contact : <span class="email-obfuscated">contact [arobase] lokavelo [point] fr</span>
-    </div>
+  <form
+    class="contact-form"
+    action="https://formspree.io/f/mwvylnjw"
+    method="POST"
+  >
+    <label>
+      Nom
+      <input type="text" name="name" autocomplete="name" required>
+    </label>
 
-    <div class="contact-actions">
-      <button class="btn-primary" type="button" onclick="openContactEmail()">Écrire un e-mail</button>
-      <a class="btn-secondary" href="https://instagram.com/lokavelo" target="_blank" rel="noopener">Retrouver LokaVélo sur Instagram</a>
-    </div>
-  </section>
+    <label>
+      Adresse e-mail
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
 
-  <div class="contact-grid">
-    <div class="contact-card">
-      <h2>Support</h2>
-      <p>Pour une question liée à l’utilisation de l’application, une réservation, un paiement ou une caution.</p>
-    </div>
+    <label>
+      Sujet
+      <input type="text" name="subject" required>
+    </label>
 
-    <div class="contact-card">
-      <h2>Données personnelles</h2>
-      <p>Pour exercer tes droits RGPD : accès, rectification, suppression ou opposition au traitement de tes données.</p>
-    </div>
-  </div>
+    <label>
+      Message
+      <textarea name="message" rows="7" required></textarea>
+    </label>
+
+    <input type="text" name="_gotcha" class="gotcha-field" tabindex="-1" autocomplete="off">
+
+    <button class="btn-primary" type="submit">
+      Envoyer le message
+    </button>
+  </form>
+</section>
 </div>
 
 <footer class="site-footer">
