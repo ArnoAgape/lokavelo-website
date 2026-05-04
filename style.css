@@ -732,7 +732,7 @@ nav a:hover,
 
 .page-hero {
   min-height: auto;
-  padding: 126px 1.4rem 2.4rem;
+  padding: 92px 1.4rem 1.6rem;
   display: block;
   text-align: center;
   overflow: hidden;
@@ -1064,7 +1064,8 @@ footer a:hover,
 
 @media (max-width: 860px) {
   .page-hero {
-    padding-top: 102px;
+    padding-top: 84px;
+    padding-bottom: 1.4rem;
   }
 }
 
@@ -1134,6 +1135,11 @@ footer a:hover,
 }
 
 @media (max-width: 520px) {
+  .page-hero {
+    padding-top: 78px;
+    padding-bottom: 1.2rem;
+  }
+
   header,
   .site-header {
     padding: 0 1rem;
