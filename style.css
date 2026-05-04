@@ -128,6 +128,14 @@
       transform: translateY(-2px);
       color: var(--white) !important;
     }
+	
+	.nav-pill {
+	  color: var(--white) !important;
+	  padding: 0.48rem 1rem;
+	  border-radius: 999px;
+	  background: linear-gradient(135deg, var(--blue), var(--cyan));
+	  box-shadow: 0 10px 24px rgba(22, 199, 238, 0.22);
+	}
 
     /* ───────────────────────── HERO ───────────────────────── */
     .hero {
