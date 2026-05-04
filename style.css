@@ -495,6 +495,18 @@ nav a:hover,
   text-transform: uppercase;
 }
 
+/* Corrige le bouton Contact dans les cartes CTA finales */
+.faq-cta-card .btn-android {
+  margin-right: 1.8rem;
+  flex-shrink: 0;
+}
+
+/* Retire les petites décorations latérales uniquement dans les CTA finales */
+.faq-cta-card .btn-android::before,
+.faq-cta-card .btn-android::after {
+  display: none;
+}
+
 /* ───────────────────────── HOME SECTIONS ───────────────────────── */
 
 .landscape {
