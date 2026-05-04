@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — LokaVélo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="../index.html" class="logo">
+    <img src="../ic_lokavelo_logo.png" alt="LokaVélo">
+  </a>
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="cgu.html">CGU</a>
+    <a href="confidentialite.html">Confidentialité</a>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="contact.html" class="nav-pill">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div class="hero-tag">Contact</div>
+  <h1>Une question sur LokaVélo ?</h1>
+  <p class="hero-date">Un message, une idée, un souci : la porte est ouverte.</p>
+</div>
+
+<div class="container">
+  <section>
+    <h2>Contacter LokaVélo</h2>
+    <p>Pour toute question concernant l’application, une location, ton compte ou les documents légaux, tu peux écrire à LokaVélo.</p>
+
+    <div class="highlight-box">
+      Adresse de contact : <span class="email-obfuscated">contact [arobase] lokavelo [point] fr</span>
+    </div>
+
+    <div class="contact-actions">
+      <button class="btn-primary" type="button" onclick="openContactEmail()">Écrire un e-mail</button>
+      <a class="btn-secondary" href="https://instagram.com/lokavelo" target="_blank" rel="noopener">Retrouver LokaVélo sur Instagram</a>
+    </div>
+  </section>
+
+  <div class="contact-grid">
+    <div class="contact-card">
+      <h2>Support</h2>
+      <p>Pour une question liée à l’utilisation de l’application, une réservation, un paiement ou une caution.</p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Données personnelles</h2>
+      <p>Pour exercer tes droits RGPD : accès, rectification, suppression ou opposition au traitement de tes données.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <p class="footer-line">
+    © 2026 LokaVélo — Arno Bouiron
+    <span>·</span>
+    <a href="cgu.html">CGU</a>
+    <span>·</span>
+    <a href="confidentialite.html">Confidentialité</a>
+    <span>·</span>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <span>·</span>
+    <a href="contact.html">Contact</a>
+  </p>
+</footer>
+
+<script>
+  function openContactEmail() {
+    const user = "contact";
+    const domain = "lokavelo.fr";
+    const subject = encodeURIComponent("Contact depuis lokavelo.fr");
+    window.location.href = "mailto:" + user + "@" + domain + "?subject=" + subject;
+  }
+</script>
+
+</body>
+</html>
