@@ -801,16 +801,38 @@ nav a:hover,
   margin-bottom: 0.75rem;
 }
 
+/* Numérotation automatique : 1, 2, 3, 3.1, 3.2... */
 .toc ol {
+  counter-reset: item;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Sommaire principal en 2 colonnes */
+.toc > ol {
   columns: 2;
   column-gap: 2.4rem;
-  padding-left: 1.2rem;
 }
 
 .toc li {
+  counter-increment: item;
   break-inside: avoid;
   margin: 0.34rem 0;
   color: var(--muted);
+}
+
+.toc li::before {
+  content: counters(item, ".") ". ";
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Sous-parties : 3.1, 3.2... */
+.toc li ol {
+  counter-reset: item;
+  columns: 1;
+  padding-left: 1.2rem;
+  margin-top: 0.35rem;
 }
 
 .container > section {
