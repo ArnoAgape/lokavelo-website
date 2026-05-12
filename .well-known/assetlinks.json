@@ -5,8 +5,7 @@
       "namespace": "android_app",
       "package_name": "com.arnoagape.lokavelo",
       "sha256_cert_fingerprints": [
-        "EA:E4:E1:89:B2:D2:F9:76:DD:41:FC:76:CF:83:CA:53:34:F9:39:79:98:0F:A5:C0:67:CC:5D:EC:17:67:46:FB",
-        "REPLACE_WITH_PLAY_APP_SIGNING_SHA256_FINGERPRINT"
+        "EA:E4:E1:89:B2:D2:F9:76:DD:41:FC:76:CF:83:CA:53:34:F9:39:79:98:0F:A5:C0:67:CC:5D:EC:17:67:46:FB"
       ]
     }
   }
