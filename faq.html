@@ -36,7 +36,7 @@
     <img src="ic_lokavelo_logo.png" alt="LokaVélo" class="hero-logo">
     <div class="section-eyebrow">Questions fréquentes</div>
     <h1>Tout comprendre avant de <span class="accent">louer ou proposer</span> un vélo.</h1>
-    <p class="hero-sub">Sécurité, caution, paiement, état des lieux : les réponses aux questions essentielles pour utiliser LokaVélo sereinement.</p>
+    <p class="hero-sub">Recherche, paiement, caution, état des lieux, litiges, assurance : toutes les réponses, classées par thème, pour utiliser LokaVélo sereinement.</p>
   </div>
 </section>
 
@@ -44,56 +44,189 @@
   <div class="section-inner">
     <div class="section-eyebrow">FAQ locataire</div>
     <h2 class="section-title">Tu cherches un vélo</h2>
-    <p class="section-sub">Les réponses utiles avant d’envoyer une demande et de prendre la route.</p>
+    <p class="section-sub">Tout ce qu’il faut savoir, de la recherche d’un vélo à la fin de la location.</p>
 
+    <h3 class="faq-category">Trouver &amp; réserver un vélo</h3>
     <div class="faq-list">
       <details class="faq-item" open>
         <summary>Comment trouver un vélo disponible ?</summary>
-        <p>Tu peux rechercher un vélo depuis la carte ou sous forme de liste. Tu peux saisir une adresse, choisir tes dates, puis filtrer selon le type de vélo, ton budget ou les caractéristiques recherchées.</p>
+        <p>Recherche un vélo depuis la carte ou en liste. Tu saisis une adresse, choisis tes dates, puis tu filtres par type de vélo, budget, taille ou caractéristiques. Seuls les vélos disponibles sur la période choisie sont affichés.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Pourquoi certains vélos n’apparaissent-ils pas ?</summary>
+        <p>Un vélo déjà loué ou réservé sur les dates que tu as choisies n’apparaît pas dans les résultats. Modifie tes dates pour voir d’autres vélos disponibles.</p>
       </details>
       <details class="faq-item">
         <summary>Comment se passe la demande de location ?</summary>
-        <p>Tu choisis le vélo, les dates souhaitées, puis tu contactes le propriétaire depuis l’application. Le propriétaire peut accepter ta demande, la refuser ou te proposer une offre personnalisée.</p>
+        <p>Tu choisis le vélo et les dates souhaitées, puis tu contactes le propriétaire depuis l’application. Il peut accepter ta demande, la refuser ou te proposer une offre personnalisée. La location est confirmée une fois le paiement effectué.</p>
       </details>
       <details class="faq-item">
-        <summary>Quand dois-je payer la location ?</summary>
-        <p>Le paiement se fait par carte bancaire dans l’application, une fois que la location est acceptée. Les paiements sont traités via Stripe, prestataire de paiement sécurisé.</p>
+        <summary>Le propriétaire peut-il me proposer un autre prix ?</summary>
+        <p>Oui. Le propriétaire peut te faire une offre personnalisée (contre-offre). Tu es libre de l’accepter ou non avant de payer.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je louer plusieurs vélos à la fois ?</summary>
+        <p>Oui, tu peux demander un lot de plusieurs vélos auprès d’un même propriétaire (utile pour une sortie en groupe ou en famille). Une réduction est appliquée automatiquement selon le nombre de vélos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Y a-t-il une durée minimale de location ?</summary>
+        <p>Chaque propriétaire fixe la durée minimale de location de son vélo. Elle est indiquée sur l’annonce et au moment de choisir tes dates.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Paiement, frais &amp; caution</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quand et comment dois-je payer ?</summary>
+        <p>Le paiement se fait par carte bancaire dans l’application, une fois la location acceptée. Les paiements sont traités via Stripe, prestataire de paiement sécurisé.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quels sont les frais de service ?</summary>
+        <p>LokaVélo prélève des frais de service de 12 % TTC, à la charge du locataire, ajoutés au prix de la location. Ils couvrent le fonctionnement de la plateforme et ne sont pas remboursés en cas d’annulation.</p>
       </details>
       <details class="faq-item">
         <summary>À quoi sert la caution par empreinte bancaire ?</summary>
-        <p>La caution permet de sécuriser la location en cas de dommage constaté sur le vélo. Il s’agit d’une empreinte bancaire : elle n’est pas débitée automatiquement. Elle peut être mobilisée uniquement si un dommage est constaté et justifié.</p>
+        <p>La caution sécurise la location en cas de dommage constaté. C’est une empreinte bancaire : une somme est bloquée sur ta carte mais <strong>non débitée</strong>. Elle n’est mobilisée que si un dommage est constaté et justifié.</p>
       </details>
       <details class="faq-item">
-        <summary>Que dois-je vérifier au moment de récupérer le vélo ?</summary>
-        <p>Un état des lieux d’entrée est réalisé avec le propriétaire dans l’application. Il permet de constater ensemble l’état du vélo avant le départ : cadre, roues, freins, accessoires, antivol et éventuels défauts déjà présents.</p>
+        <summary>La caution est-elle débitée pendant la location ?</summary>
+        <p>Non. Elle reste une simple autorisation bancaire pendant toute la durée de la location, renouvelée automatiquement si besoin pour les locations longues. Elle n’est débitée qu’en cas de retenue justifiée à la restitution.</p>
       </details>
       <details class="faq-item">
-        <summary>Que faire si le vélo est abîmé, volé ou si j’ai un problème pendant la location ?</summary>
-        <p>Signale-le immédiatement depuis l’application : un bouton dédié te permet de <strong>déclarer un incident</strong> (panne, accident, vol) pendant la location. Préviens aussi le propriétaire via la messagerie. En cas de vol, dépose plainte sous 24 h et conserve le récépissé. LokaVélo examine le signalement et statue sur l’affectation des sommes en jeu (paiement et caution).</p>
+        <summary>Mes données bancaires sont-elles en sécurité ?</summary>
+        <p>Oui. LokaVélo n’a pas accès à tes données bancaires (numéro de carte, etc.). Elles sont gérées exclusivement par Stripe, conformément à ses normes de sécurité.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Récupérer le vélo (état des lieux d’entrée)</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Que dois-je vérifier en récupérant le vélo ?</summary>
+        <p>Un état des lieux d’entrée est réalisé avec le propriétaire dans l’application : cadre, roues, freins, accessoires, antivol et éventuels défauts déjà présents. Prends le temps de tout vérifier et photographier.</p>
       </details>
       <details class="faq-item">
-        <summary>Est-ce que je peux prêter le vélo à quelqu’un d’autre ?</summary>
-        <p>Non. Le vélo est confié au locataire qui a réalisé la demande. Il ne doit pas être prêté, sous-loué ou confié à une autre personne sans l’accord du propriétaire.</p>
+        <summary>À quoi sert l’état des lieux d’entrée ?</summary>
+        <p>Il constate ensemble l’état du vélo avant le départ. Avec l’état des lieux de sortie, il sert de référence contractuelle en cas de litige sur l’état du vélo.</p>
       </details>
+      <details class="faq-item">
+        <summary>Que faire si le vélo ne correspond pas à l’annonce ?</summary>
+        <p>Au moment de l’état des lieux d’entrée, si le vélo ne correspond pas à l’annonce (modèle, état, équipements), <strong>ne l’utilise pas</strong> et signale-le tout de suite via le bouton « Le vélo ne correspond pas » sur l’écran de la location. Les photos de ton état des lieux servent de preuve. LokaVélo examine la situation et décide.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Pendant la location</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Comment dois-je utiliser le vélo ?</summary>
+        <p>Avec soin, conformément à son usage prévu. Par exemple, un vélo de route ne doit pas être utilisé sur des chemins inadaptés. Tu es responsable de la garde du vélo pendant toute la location.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Dois-je attacher le vélo ? Où le stocker la nuit ?</summary>
+        <p>Oui : attache le vélo dès qu’il est laissé sans surveillance, avec l’antivol fourni par le propriétaire. Évite de le laisser dans la rue la nuit ; conserve-le de préférence dans un lieu fermé (garage, cave, logement).</p>
+      </details>
+      <details class="faq-item">
+        <summary>Que faire en cas de crevaison ou de panne mineure ?</summary>
+        <p>Le propriétaire t’indique avant le départ la marche à suivre : soit tu gères les réparations courantes, soit tu le contactes. En cas de doute, contacte-le via la messagerie.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Que faire en cas d’accident, de vol ou d’incident ?</summary>
+        <p>Signale-le immédiatement depuis l’application via le bouton <strong>« Déclarer un incident »</strong> (panne, accident, vol) et préviens le propriétaire par la messagerie. En cas de vol, dépose plainte sous 24 h et conserve le récépissé. LokaVélo examine le signalement.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je prêter ou sous-louer le vélo ?</summary>
+        <p>Non. Le vélo est confié au locataire qui a fait la demande. Il ne doit pas être prêté, sous-loué ou confié à un tiers sans l’accord du propriétaire.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je prolonger ou modifier les dates ?</summary>
+        <p>Oui, tu peux demander une prolongation ou un changement de dates depuis l’écran de la location. Le prix (et, le cas échéant, le remboursement) est recalculé et la demande est soumise à l’accord du propriétaire.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Fin de location &amp; restitution</h3>
+    <div class="faq-list">
       <details class="faq-item">
         <summary>Comment se termine la location ?</summary>
         <p>À la restitution, un état des lieux de sortie est réalisé avec le propriétaire. Si tout est conforme, la location se termine normalement et la caution n’est pas mobilisée.</p>
       </details>
       <details class="faq-item">
-        <summary>Que faire si le vélo ne correspond pas à l’annonce ?</summary>
-        <p>Au moment de l’état des lieux d’entrée, si le vélo ne correspond pas à l’annonce (modèle, état, équipements), ne l’utilise pas et signale-le tout de suite via le bouton « Le vélo ne correspond pas » sur l’écran de la location. Les photos de ton état des lieux servent de preuve. LokaVélo examine la situation et décide.</p>
+        <summary>Vais-je recevoir un justificatif de la location ?</summary>
+        <p>Oui. À la clôture, un contrat de location récapitulatif (période, montants, états des lieux, décision sur la caution) est envoyé par email aux deux parties et conservé comme preuve.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quand ma caution est-elle libérée ?</summary>
+        <p>L’empreinte de caution est libérée après l’état des lieux de sortie, une fois la courte période de signalement des litiges close et en l’absence de retenue justifiée.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Annulation &amp; remboursement</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Suis-je remboursé si j’annule ?</summary>
+        <p>Cela dépend de la date d’annulation (jours calendaires, heure de Paris) : <strong>plus de 5 jours avant</strong> le début → 100 % du prix de la location ; <strong>entre 2 et 5 jours avant</strong> → 50 % ; <strong>moins de 48 h avant</strong> → aucun remboursement. Les frais de service ne sont jamais remboursés.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Que se passe-t-il si le propriétaire annule ?</summary>
+        <p>Si le propriétaire annule, tu es intégralement remboursé du prix de la location et de la caution (qui n’est de toute façon pas débitée), sous 5 à 10 jours ouvrés.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Si je réduis les dates, suis-je remboursé ?</summary>
+        <p>Une réduction de dates sur une location confirmée peut donner lieu à un remboursement partiel, calculé selon les mêmes paliers que l’annulation, par rapport à la date de début initiale, après acceptation du propriétaire.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Litiges &amp; remboursements</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Comment signaler un problème ou ouvrir un litige ?</summary>
+        <p>Depuis l’écran de la location, selon le contexte : « Le vélo ne correspond pas » à la remise, « Déclarer un incident » pendant la location, « Contester la caution » après l’état des lieux de sortie. Joins des photos si possible.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Dans quel délai puis-je signaler un litige ?</summary>
+        <p>Dans les <strong>3 jours suivant l’état des lieux de sortie</strong>. Si aucun état des lieux de sortie n’a lieu, le délai expire au plus tard <strong>7 jours après la date de fin prévue</strong> de la location.</p>
       </details>
       <details class="faq-item">
         <summary>Comment contester une retenue sur ma caution ?</summary>
-        <p>Après l’état des lieux de sortie, tu disposes de 3 jours pour contester via le bouton « Contester la caution » dans l’application. La caution et le paiement restent gelés tant que le litige n’est pas résolu.</p>
+        <p>Après l’état des lieux de sortie, utilise le bouton « Contester la caution » dans le délai indiqué ci-dessus. La caution et le paiement restent gelés tant que le litige n’est pas résolu.</p>
       </details>
       <details class="faq-item">
-        <summary>Comment LokaVélo traite-t-il un litige ?</summary>
-        <p>LokaVélo examine les éléments (états des lieux, photos, échanges) et rend l’une de ces décisions : remboursement intégral et annulation, remboursement partiel, ou litige non retenu. Les deux parties sont notifiées. LokaVélo n’est pas assureur : son intervention se limite aux sommes qu’il détient (paiement de la location et caution).</p>
+        <summary>Comment LokaVélo tranche-t-il un litige ?</summary>
+        <p>LokaVélo examine les éléments (états des lieux, photos, échanges) et rend l’une de ces décisions : <strong>remboursement intégral et annulation</strong>, <strong>remboursement partiel</strong>, ou <strong>litige non retenu</strong>. Les deux parties sont notifiées.</p>
       </details>
       <details class="faq-item">
-        <summary>Suis-je remboursé si j’annule ?</summary>
-        <p>Cela dépend de la date d’annulation (jours calendaires, heure de Paris) : <strong>plus de 5 jours avant</strong> le début → 100 % du prix de la location ; <strong>entre 2 et 5 jours avant</strong> → 50 % ; <strong>moins de 48 h avant</strong> → aucun remboursement. Les frais de service ne sont pas remboursés.</p>
+        <summary>Que se passe-t-il pendant un litige ?</summary>
+        <p>Le versement au propriétaire et la libération de la caution sont suspendus jusqu’à la résolution du litige. Les signalements doivent être faits de bonne foi ; tout abus peut entraîner le rejet du litige et la suspension du compte.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Assurance &amp; responsabilité</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>LokaVélo assure-t-il la location ?</summary>
+        <p>Non. À ce jour, aucune assurance spécifique n’est incluse. LokaVélo agit comme intermédiaire et son intervention en cas de litige se limite aux sommes qu’il détient (paiement et caution).</p>
+      </details>
+      <details class="faq-item">
+        <summary>Suis-je responsable en cas de vol ou de dommage ?</summary>
+        <p>Tu es responsable de la garde du vélo. En cas de vol où le vélo était correctement attaché avec l’antivol fourni, ta responsabilité peut être atténuée sur présentation du dépôt de plainte, à l’appréciation du propriétaire.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Dois-je avoir une assurance personnelle ?</summary>
+        <p>C’est recommandé. Vérifie si ton assurance responsabilité civile (souvent incluse dans l’assurance habitation) couvre l’usage d’un vélo et la garde temporaire d’un bien appartenant à un tiers.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Mon compte</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Comment modifier mes informations, mon email ou mon mot de passe ?</summary>
+        <p>Depuis ton profil. Le changement d’adresse email est possible pour les comptes créés par email/mot de passe ; les utilisateurs connectés via Google gèrent leur email côté Google. Tu peux aussi changer ou réinitialiser ton mot de passe.</p>
+      </details>
+      <details class="faq-item">
+        <summary>J’ai oublié mon mot de passe.</summary>
+        <p>Utilise le lien « Mot de passe oublié » sur l’écran de connexion pour recevoir un email de réinitialisation.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment supprimer mon compte ?</summary>
+        <p>Depuis l’application, à tout moment. La suppression est refusée s’il reste des locations en cours afin de ne pas léser l’autre partie ; l’historique nécessaire est anonymisé.</p>
       </details>
     </div>
   </div>
@@ -103,48 +236,149 @@
   <div class="section-inner">
     <div class="section-eyebrow">FAQ propriétaire</div>
     <h2 class="section-title">Tu proposes ton vélo</h2>
-    <p class="section-sub">Les réponses utiles pour publier ton annonce et louer ton vélo avec confiance.</p>
+    <p class="section-sub">De la publication de l’annonce au versement, en passant par les litiges.</p>
 
+    <h3 class="faq-category">Publier mon vélo</h3>
     <div class="faq-list">
       <details class="faq-item" open>
         <summary>Comment publier mon vélo ?</summary>
-        <p>Tu ajoutes des photos, un titre, une description, les caractéristiques du vélo, son adresse de mise à disposition, ton tarif, la durée minimale de location et le montant de la caution.</p>
+        <p>Tu ajoutes des photos, un titre, une description, les caractéristiques du vélo, son adresse de mise à disposition, tes tarifs, la durée minimale de location et le montant de la caution. Un guide de remplissage t’accompagne dans l’application.</p>
       </details>
       <details class="faq-item">
         <summary>Publier une annonce est-il payant ?</summary>
-        <p>Non. Publier une annonce sur LokaVélo est gratuit. Tu restes libre d’accepter, de refuser ou de proposer une offre personnalisée lorsqu’un locataire te contacte.</p>
+        <p>Non, c’est gratuit. Tu restes libre d’accepter, de refuser ou de proposer une offre personnalisée quand un locataire te contacte.</p>
       </details>
       <details class="faq-item">
-        <summary>Comment sécuriser la location de mon vélo ?</summary>
-        <p>LokaVélo prévoit une caution par empreinte bancaire, un état des lieux d’entrée et de sortie, ainsi qu’une messagerie pour garder une trace des échanges. Il est aussi fortement recommandé de fournir un antivol solide et adapté à la valeur du vélo.</p>
+        <summary>Comment fixer mes tarifs ?</summary>
+        <p>Tu peux définir un tarif par jour et, si tu le souhaites, des tarifs dégressifs (deux jours, semaine, mois). Tu fixes aussi le montant de la caution et la durée minimale de location.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Mon vélo apparaît-il quand il est déjà loué ?</summary>
+        <p>Non. Un vélo loué ou réservé sur une période n’apparaît pas dans les recherches sur ces dates : tu ne reçois pas de demandes en conflit.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Gérer les demandes</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Comment répondre à une demande de location ?</summary>
+        <p>Tu reçois la demande dans l’application : tu peux l’accepter, la refuser, ou proposer une offre personnalisée (autre prix). La location est confirmée une fois que le locataire a payé.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je louer plusieurs de mes vélos au même locataire ?</summary>
+        <p>Oui. Un locataire peut demander un lot de plusieurs de tes vélos ; une réduction est appliquée automatiquement selon le nombre de vélos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Que faire si je ne suis pas disponible aux dates demandées ?</summary>
+        <p>Tu peux refuser la demande ou proposer d’autres conditions via une offre personnalisée. Tu n’es jamais engagé tant que tu n’as pas accepté.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Remise du vélo</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Que faire avant de remettre le vélo ?</summary>
+        <p>Vérifie l’état général du vélo, signale les défauts connus, explique son fonctionnement et précise la marche à suivre en cas de crevaison ou de panne mineure.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment se passe l’état des lieux d’entrée ?</summary>
+        <p>Il est réalisé avec le locataire dans l’application au moment de la remise : vous constatez ensemble l’état du vélo (cadre, roues, freins, accessoires, antivol, défauts existants), photos à l’appui.</p>
       </details>
       <details class="faq-item">
         <summary>Dois-je fournir un antivol ?</summary>
-        <p>Oui, il est recommandé de fournir un antivol adapté. Pour les vélos de valeur, un antivol certifié ou homologué par les assurances, par exemple de norme SRA ou équivalente, est fortement conseillé.</p>
+        <p>Oui, un antivol adapté à la valeur du vélo. Pour un vélo de valeur, un antivol certifié ou homologué par les assurances (norme SRA ou équivalente) est fortement conseillé.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Pendant &amp; restitution</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Que faire si le locataire signale un problème ?</summary>
+        <p>Tu es notifié. Échange via la messagerie pour trouver une solution. Si nécessaire, LokaVélo examine le signalement et statue sur l’affectation des sommes (paiement et caution).</p>
       </details>
       <details class="faq-item">
-        <summary>Que faire avant de remettre le vélo au locataire ?</summary>
-        <p>Vérifie l’état général du vélo, signale les éventuels défauts connus, explique son fonctionnement et précise quoi faire en cas de crevaison ou de panne mineure. L’état des lieux d’entrée permet ensuite de constater l’état du vélo avec le locataire.</p>
+        <summary>Comment se passe l’état des lieux de sortie ?</summary>
+        <p>À la restitution, tu réalises l’état des lieux de sortie avec le locataire et tu indiques ta décision sur la caution (libération totale, retenue partielle ou totale justifiée).</p>
       </details>
       <details class="faq-item">
-        <summary>Quand est-ce que je reçois l’argent de la location ?</summary>
-        <p>Le paiement est encaissé par LokaVélo puis reversé <strong>environ 3 jours après l’état des lieux de sortie</strong>, en l’absence de litige, selon les délais de Stripe (généralement 5 à 10 jours ouvrés). Si un litige est ouvert dans ce délai, le versement est suspendu jusqu’à sa résolution.</p>
+        <summary>Que faire si le locataire ne rend pas le vélo ?</summary>
+        <p>Tu peux signaler une non-restitution via « Signaler un litige ». Le délai pour signaler court jusqu’à 7 jours après la date de fin prévue lorsque aucun état des lieux de sortie n’a eu lieu.</p>
       </details>
+    </div>
+
+    <h3 class="faq-category">Paiement &amp; commission</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quelle commission prélève LokaVélo ?</summary>
+        <p>Les frais de service (12 % TTC) sont à la charge du locataire. Tu perçois le prix de la location que tu as fixé, sans commission prélevée sur ta part.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quand vais-je recevoir l’argent de la location ?</summary>
+        <p>Le paiement est encaissé par LokaVélo puis reversé <strong>environ 3 jours après l’état des lieux de sortie</strong>, en l’absence de litige, selon les délais de Stripe (généralement 5 à 10 jours ouvrés). En cas de litige, le versement est suspendu jusqu’à sa résolution.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Comment configurer mes paiements ?</summary>
+        <p>Tu dois activer la réception des paiements (création d’un compte Stripe Connect) depuis ton profil. Sans cela, les fonds ne peuvent pas t’être versés ; le virement se déclenche une fois ton compte actif.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Vais-je recevoir un justificatif ?</summary>
+        <p>Oui. À la clôture, un contrat de location récapitulatif est envoyé par email aux deux parties (utile pour ta comptabilité ou ton assurance). Pour un lot de vélos, un contrat unique récapitule tous les vélos.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Caution, dommages &amp; litiges</h3>
+    <div class="faq-list">
       <details class="faq-item">
         <summary>Que se passe-t-il en cas de dommage ?</summary>
-        <p>Documente le dommage lors de l’état des lieux de sortie (photos, devis ou facture) et signale-le via « Signaler un litige » dans l’application. Le montant retenu sur la caution doit être justifié par des éléments concrets. LokaVélo examine le dossier et statue sur la retenue de caution.</p>
+        <p>Documente le dommage lors de l’état des lieux de sortie (photos, devis ou facture) et signale-le via « Signaler un litige ». Le montant retenu sur la caution doit être justifié par des éléments concrets. LokaVélo examine le dossier et statue.</p>
       </details>
       <details class="faq-item">
         <summary>Comment signaler un dommage, un vol ou une non-restitution ?</summary>
-        <p>Depuis l’écran de la location, utilise le bouton « Signaler un litige » après la restitution (ou en cas de non-restitution du vélo). Joins les photos de l’état des lieux. LokaVélo instruit le dossier et décide de l’affectation de la caution et du paiement.</p>
+        <p>Depuis l’écran de la location, bouton « Signaler un litige » après la restitution (ou en cas de non-restitution). Joins les photos de l’état des lieux.</p>
       </details>
       <details class="faq-item">
         <summary>Dans quel délai puis-je signaler un litige ?</summary>
-        <p>Dans les <strong>3 jours suivant la réalisation de l’état des lieux de sortie</strong>. Si aucun état des lieux de sortie n’a lieu (par exemple en cas de non-restitution), le délai expire au plus tard <strong>7 jours après la date de fin prévue</strong> de la location.</p>
+        <p>Dans les <strong>3 jours suivant l’état des lieux de sortie</strong>. À défaut d’état des lieux de sortie (non-restitution), le délai expire au plus tard <strong>7 jours après la date de fin prévue</strong> de la location.</p>
       </details>
       <details class="faq-item">
-        <summary>Est-ce que LokaVélo assure les locations ?</summary>
-        <p>À ce jour, aucune assurance spécifique n’est incluse dans le service. Chaque utilisateur est invité à vérifier ses garanties personnelles. LokaVélo envisage de proposer une solution d’assurance dédiée ultérieurement.</p>
+        <summary>Comment LokaVélo tranche-t-il ?</summary>
+        <p>Après examen des éléments, LokaVélo rend l’une de ces décisions : remboursement intégral du locataire et annulation, remboursement partiel (versement ajusté), ou litige non retenu (la location suit son cours). LokaVélo n’est pas assureur.</p>
+      </details>
+      <details class="faq-item">
+        <summary>La caution reste-t-elle valable sur une longue location ?</summary>
+        <p>Oui. L’empreinte de caution est renouvelée automatiquement avant son expiration, pendant toute la durée de la location et jusqu’à la clôture des litiges, quelle que soit la durée. Tu n’as rien à faire.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Annulation</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Puis-je annuler une location acceptée ?</summary>
+        <p>Oui, mais cela impacte le locataire : en cas d’annulation par le propriétaire, le locataire est intégralement remboursé.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Y a-t-il une pénalité si j’annule ?</summary>
+        <p>Une annulation dans les 5 jours précédant le début de la location peut, en cas de récidive, donner lieu à des frais de pénalité (12 % du montant de la location).</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Assurance &amp; responsabilité</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>LokaVélo assure-t-il mon vélo ?</summary>
+        <p>Non. Aucune assurance spécifique n’est incluse à ce jour. LokaVélo envisage une solution d’assurance dédiée ultérieurement ; tant qu’elle n’est pas indiquée dans l’application, aucune assurance n’est incluse.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Mon vélo est-il couvert quand il est loué ?</summary>
+        <p>Pas automatiquement. Vérifie auprès de ton assureur si ton vélo reste couvert lorsqu’il est confié à un locataire. La caution et la procédure de litige restent les seuls mécanismes prévus par la plateforme.</p>
+      </details>
+    </div>
+
+    <h3 class="faq-category">Mon compte</h3>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Comment gérer mon compte ?</summary>
+        <p>Depuis ton profil : modification de tes informations, de ton email (comptes email/mot de passe), de ton mot de passe, et suppression du compte. La suppression est refusée tant qu’une location est en cours.</p>
       </details>
     </div>
   </div>
@@ -155,7 +389,7 @@
     <div>
       <div class="section-eyebrow">Encore une question ?</div>
       <h2 class="section-title">Contacte LokaVélo</h2>
-      <p class="section-sub">Une question sur une location, un paiement, une caution ou ton compte ?</p>
+      <p class="section-sub">Une question sur une location, un paiement, une caution, un litige ou ton compte ?</p>
     </div>
     <a href="contact" class="btn-android">Contact</a>
   </div>

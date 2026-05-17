@@ -1030,6 +1030,31 @@ ol {
   margin-top: 0.85rem;
 }
 
+/* Catégories de la FAQ : regroupent les questions par thème */
+.faq-category {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 2.8rem 0 1.1rem;
+  font-size: clamp(1.15rem, 3vw, 1.35rem);
+  color: var(--deep-blue);
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.faq-category:first-of-type {
+  margin-top: 0.4rem;
+}
+
+.faq-category::before {
+  content: '';
+  flex: 0 0 30px;
+  width: 30px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--cyan));
+}
+
 .faq-preview-link {
   display: flex;
   justify-content: center;
