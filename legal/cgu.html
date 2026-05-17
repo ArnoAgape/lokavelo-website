@@ -42,7 +42,7 @@
 			<li><a href="#roles-locataire">Engagements du locataire</a></li>
 		  </ol>
 	  </li>
-      <li><a href="#locations">Fonctionnement des locations</a></li>
+      <li><a href="#locations">Fonctionnement, annulation et remboursement</a></li>
       <li><a href="#paiements">Paiements et commissions</a></li>
       <li><a href="#caution">Caution et dommages</a></li>
       <li><a href="#vol">Vol et sinistres</a></li>
@@ -125,26 +125,35 @@
   </section>
 
   <section id="locations">
-    <h2>4. Fonctionnement des locations</h2>
+    <h2>4. Fonctionnement, annulation et remboursement</h2>
     <p>Le locataire effectue une demande de location via lʼapplication. Le propriétaire accepte ou refuse la demande. En cas dʼacceptation, un contrat de location est conclu directement entre les deux parties.</p>
     <p>LokaVélo ne garantit pas la disponibilité permanente des vélos publiés sur la plateforme.</p>
+
+    <h3>Annulation par le locataire et remboursement</h3>
+    <p>En cas dʼannulation par le locataire avant le début de la location, le remboursement du prix de la location (les frais de service de 12 % restant dus et non remboursables) est déterminé selon la date dʼannulation, calculée en jours calendaires, heure de Paris :</p>
+    <ul>
+      <li><strong>Plus de 5 jours avant</strong> le début : remboursement intégral du prix de la location (100 %) ;</li>
+      <li><strong>Entre 2 et 5 jours avant</strong> le début : remboursement de 50 % du prix de la location ;</li>
+      <li><strong>Moins de 48 heures avant</strong> le début : aucun remboursement.</li>
+    </ul>
+    <p>Une annulation par le locataire dans les 5 jours précédant le début de la location peut, en cas de récidive, donner lieu à des frais de pénalité. Toute annulation par le propriétaire donne lieu au remboursement intégral du locataire.</p>
+    <p>En cas de réduction des dates dʼune location déjà confirmée, un remboursement partiel peut être appliqué selon les mêmes paliers, calculés par rapport à la date de début initiale.</p>
   </section>
 
   <section id="paiements">
     <h2>5. Paiements et commissions</h2>
     <p>Les paiements sont traités exclusivement via Stripe, prestataire de paiement sécurisé. LokaVélo nʼa pas accès aux données bancaires des utilisateurs (numéro de carte, IBAN, pièce dʼidentité), qui sont gérées directement par Stripe conformément à sa propre politique de sécurité.</p>
     <p>LokaVélo prélève une commission de <strong>12 % TTC</strong> sur le montant total de la location, à la charge exclusive du locataire.</p>
-    <p>Le versement au propriétaire intervient après la confirmation de la restitution du vélo, selon les délais de traitement de Stripe.</p>
+    <p>Le paiement de la location est encaissé par LokaVélo, en sa qualité dʼintermédiaire de paiement, puis reversé au propriétaire à lʼissue dʼune courte période dʼobservation suivant lʼétat des lieux de sortie (environ 3 jours après sa réalisation), en lʼabsence de litige, et selon les délais de traitement de Stripe (généralement 5 à 10 jours ouvrés). En cas de litige ouvert dans ce délai, le versement est suspendu jusquʼà la résolution du litige (voir article 12).</p>
   </section>
 
   <section id="caution">
     <h2>6. Caution et dommages</h2>
-    <p>Une caution est prélevée sous forme dʼempreinte bancaire via Stripe au moment de la location. Elle nʼest pas débitée sauf en cas de dommages constatés.</p>
+    <p>Une caution est prélevée sous forme dʼempreinte bancaire via Stripe au moment de la location. Elle nʼest pas débitée sauf en cas de dommages constatés. Lʼempreinte est maintenue valide pendant toute la durée de la location et jusquʼà la clôture de la période de signalement des litiges, quelle que soit la durée de la location.</p>
     <p>En cas de dommages sur le vélo constatés lors de lʼétat des lieux de sortie et imputables au locataire, tout ou partie de la caution peut être retenue et reversée au propriétaire afin de couvrir les frais de réparation.</p>
     <p>Le montant retenu doit être justifié par des devis, factures ou tout autre élément permettant d’évaluer les frais de réparation.
-	  En cas de désaccord, les parties sont invitées à contacter LokaVélo via la page <a href="../contact">Contact</a>.
-	  LokaVélo peut, à sa discrétion, faciliter les échanges entre les utilisateurs afin de favoriser une résolution amiable.
-	  Toutefois, LokaVélo n’est pas partie au contrat de location conclu entre le propriétaire et le locataire et ne peut être tenu de trancher un litige entre eux.
+	  Le locataire peut contester une retenue de caution via lʼapplication, dans les délais prévus à lʼarticle 12.
+	  En cas de désaccord, LokaVélo, en sa qualité dʼintermédiaire de paiement détenant lʼempreinte de caution, statue sur lʼaffectation de cette caution selon la procédure décrite à lʼarticle 12, sans pour autant devenir partie au contrat de location conclu entre le propriétaire et le locataire ni assureur.
 </p>
   </section>
 
@@ -218,7 +227,33 @@
 
   <section id="litiges">
     <h2>12. Litiges</h2>
-    <p>En cas de litige entre utilisateurs, LokaVélo peut être contacté via la page <a href="../contact">Contact</a> pour tenter une médiation amiable, sans obligation de résultat.</p>
+    <p>LokaVélo met à disposition, dans lʼapplication, une procédure de signalement permettant à chaque partie de signaler un problème lié à une location.</p>
+
+    <h3>Qui peut signaler quoi</h3>
+    <ul>
+      <li><strong>Le locataire</strong> peut signaler : un vélo non conforme à lʼannonce (au moment de lʼétat des lieux dʼentrée, avant utilisation) ; un incident survenu pendant la location (panne, accident, vol) ; ou contester une retenue sur la caution après lʼétat des lieux de sortie.</li>
+      <li><strong>Le propriétaire</strong> peut signaler : une dégradation constatée à la restitution ; un vol ou une non-restitution du vélo.</li>
+    </ul>
+
+    <h3>Délai de signalement</h3>
+    <p>Tout litige doit être signalé via lʼapplication dans un délai de <strong>3 jours suivant la réalisation de lʼétat des lieux de sortie</strong> (restitution). À défaut dʼétat des lieux de sortie, notamment en cas de non-restitution, le délai expire au plus tard <strong>7 jours après la date de fin prévue</strong> de la location. Passé ce délai, aucun litige ne peut plus être ouvert.</p>
+
+    <h3>Gel des fonds</h3>
+    <p>Lʼouverture dʼun litige suspend, jusquʼà sa résolution, le versement du paiement au propriétaire et la libération de lʼempreinte de caution, qui demeurent conservés par LokaVélo en sa qualité dʼintermédiaire de paiement.</p>
+
+    <h3>Instruction et décision</h3>
+    <p>LokaVélo examine les éléments fournis par les parties (états des lieux, photographies, descriptions, échanges via la messagerie) et rend, à sa seule appréciation raisonnable, lʼune des décisions suivantes :</p>
+    <ul>
+      <li><strong>Remboursement intégral du locataire et annulation</strong> de la location ;</li>
+      <li><strong>Remboursement partiel</strong> du locataire, le versement au propriétaire étant réduit à due concurrence ;</li>
+      <li><strong>Litige non retenu</strong> : la location suit son cours normal.</li>
+    </ul>
+    <p>Cette décision porte <strong>exclusivement sur lʼaffectation des sommes détenues par LokaVélo</strong> (paiement de la location et empreinte de caution). Elle ne confère pas à LokaVélo la qualité de partie au contrat de location conclu entre les utilisateurs, ni celle dʼassureur. Les montants en jeu sont limités au paiement de la location et au montant de la caution ; la responsabilité de LokaVélo au titre dʼun litige ne saurait excéder ces montants.</p>
+
+    <h3>Bonne foi</h3>
+    <p>Les signalements doivent être effectués de bonne foi. Toute déclaration mensongère ou tentative de fraude entraîne le rejet du litige, sans préjudice de la suspension ou de la suppression du compte et dʼéventuelles poursuites.</p>
+
+    <div class="highlight-box">En complément de cette procédure, LokaVélo peut être contacté via la page <a href="../contact">Contact</a> pour faciliter une médiation amiable entre utilisateurs, sans obligation de résultat.</div>
     <p>Les présentes CGU sont soumises au droit français. En cas de litige avec LokaVélo, et à défaut de résolution amiable, les tribunaux compétents sont ceux du ressort de Marseille.</p>
   </section>
 
