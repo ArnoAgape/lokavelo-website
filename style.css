@@ -1150,8 +1150,13 @@ ol {
 .faq-shot {
   margin: 0.5rem 0 0.2rem;
   min-height: 160px;
-  display: grid;
-  place-items: center;
+  /* Flex sur la règle de base (pas via :has) → les captures se placent
+     TOUJOURS de gauche à droite, même sur navigateurs sans :has(). */
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   border: 1.5px dashed rgba(23, 103, 216, 0.30);
   border-radius: 18px;
@@ -1167,8 +1172,8 @@ ol {
 
 .faq-shot img {
   display: block;
-  max-height: 340px;
-  max-width: 100%;
+  max-height: 240px;
+  max-width: 45%;
   width: auto;
   height: auto;
   border-radius: 16px;
