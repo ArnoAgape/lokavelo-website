@@ -1194,7 +1194,7 @@ ol {
    disparaissent automatiquement. */
 .faq-shot {
   margin: 0.5rem 0 0.2rem;
-  min-height: 320px;
+  min-height: 160px;
   display: flex;
   flex-flow: row wrap;
   gap: 0.75rem;
@@ -1216,7 +1216,7 @@ ol {
 .faq-shot img {
   display: block;
   max-height: 240px;
-  max-width: 45%;
+  max-width: 75%;
   width: auto;
   height: auto;
   border-radius: 16px;
@@ -1228,7 +1228,6 @@ ol {
   padding: 0;
   border: 0;
   background: transparent;
-  /* Captures côte à côte (de gauche à droite), au lieu de l'empilement grid. */
   display: flex;
   flex-flow: row wrap;
   gap: 0.75rem;
