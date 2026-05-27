@@ -1194,9 +1194,7 @@ ol {
    disparaissent automatiquement. */
 .faq-shot {
   margin: 0.5rem 0 0.2rem;
-  min-height: 160px;
-  /* Flex sur la règle de base (pas via :has) → les captures se placent
-     TOUJOURS de gauche à droite, même sur navigateurs sans :has(). */
+  min-height: 320px;
   display: flex;
   flex-flow: row wrap;
   gap: 0.75rem;
