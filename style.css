@@ -661,9 +661,7 @@ nav a:hover,
 
 .step-shot img {
   display: block;
-  max-width: 100%;
-  max-height: 200px;
-  width: auto;
+  width: min(240px, 80vw);
   height: auto;
   border-radius: 12px;
   box-shadow: var(--shadow-soft);
