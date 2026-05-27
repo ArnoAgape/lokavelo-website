@@ -1215,11 +1215,9 @@ ol {
 
 .faq-shot img {
   display: block;
-  max-height: 240px;
-  max-width: 75%;
-  width: auto;
+  width: min(280px, 80vw);
   height: auto;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: var(--shadow-soft);
 }
 
