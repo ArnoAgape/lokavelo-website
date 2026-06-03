@@ -848,10 +848,18 @@ nav a:hover,
   padding-left: 0;
 }
 
-/* Sommaire principal en 2 colonnes */
+/* Sommaire principal en 2 colonnes — CSS grid plutôt que `columns: 2`.
+   Raison : `columns` équilibre automatiquement la hauteur des colonnes pour
+   les remplir au mieux, ce qui désaligne les titres top-level quand le 3e
+   item (Mon compte, plus petit) est ajouté. Avec grid + `align-items: start`,
+   chaque <li> reste calé en haut de sa cellule → Locataire et Propriétaire
+   sont parfaitement alignés sur la 1re ligne, et Mon compte tombe
+   naturellement en col 1 ligne 2, juste sous Locataire. */
 .toc > ol {
-  columns: 2;
-  column-gap: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.34rem 2.4rem;       /* row-gap aligne sur l'espacement vertical des <li> */
+  align-items: start;
 }
 
 .toc li {
@@ -1526,8 +1534,11 @@ footer a:hover,
     background: transparent;
   }
 
-  .toc ol {
-    columns: 1;
+  /* Sommaire principal en 1 colonne sur mobile (sinon la grid 1fr 1fr
+     desktop reste active et écrase les titres sur les petits écrans).
+     Les sous-listes restent en `columns: 1` par défaut, rien à override. */
+  .toc > ol {
+    grid-template-columns: 1fr;
   }
 
   .contact-grid {
