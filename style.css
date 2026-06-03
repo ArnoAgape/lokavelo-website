@@ -215,6 +215,31 @@ nav a:hover,
   pointer-events: none;
 }
 
+/* Photo d'illustration de la section « Pourquoi LokaVélo ».
+   Coins arrondis + ombre douce pour rester cohérente avec .toc et
+   .contact-card. max-height empêche qu'une photo lourde écrase la
+   section sur grands écrans ; object-fit: cover recadre joliment au
+   lieu de déformer. */
+.why-photo {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 28px;
+  box-shadow: var(--shadow-soft);
+  margin: 1.75rem 0 2rem;
+}
+
+/* Sur mobile, on réduit un peu pour ne pas voler trop d'espace au texte. */
+@media (max-width: 720px) {
+  .why-photo {
+    max-height: 280px;
+    border-radius: 22px;
+    margin: 1.25rem 0 1.5rem;
+  }
+}
+
 .map-line {
   position: absolute;
   color: rgba(22, 199, 238, 0.45);
