@@ -545,8 +545,8 @@ nav a:hover,
    compacte (150px) parce qu'il est entouré de boutons CTA et de SVG ; ici
    on a tout l'espace de la carte pour soi. */
 .qr-card .hero-qr-placeholder {
-  width: 220px;
-  height: 220px;
+  width: 150px;
+  height: 150px;
   border-radius: 24px;
   padding: 10px;
   margin-bottom: 0;
@@ -1668,8 +1668,8 @@ footer a:hover,
   /* Override du QR download sur tablette : reste imposant pour conserver
      l'impact visuel mais s'adapte à la largeur réduite de la carte. */
   .qr-card .hero-qr-placeholder {
-    width: 190px;
-    height: 190px;
+    width: 140px;
+    height: 140px;
     border-radius: 22px;
     padding: 9px;
   }
@@ -1770,8 +1770,8 @@ footer a:hover,
   /* Override du QR download sur smartphone. Reste très grand pour rester
      lisible/scannable depuis ~30 cm. */
   .qr-card .hero-qr-placeholder {
-    width: 170px;
-    height: 170px;
+    width: 140px;
+    height: 140px;
     border-radius: 20px;
     padding: 8px;
   }
