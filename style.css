@@ -1629,10 +1629,25 @@ footer a:hover,
   }
 
   .hero-qr-placeholder {
-    width: 116px;
-    height: 116px;
-    border-radius: 18px;
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
     padding: 6px;
+  }
+
+  /* Sur mobile, on aère le bas du hero pour qu'il ne colle pas au texte
+     "Louer avec LokaVélo ?" de la section suivante (l'enchaînement direct
+     hero → .why donnait l'impression que les deux blocs se touchaient). */
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+
+  /* Carte "Google Play Store" + carte Instagram : sur mobile, le QR et le
+     texte se retrouvaient collés à 1.2rem de gap. On augmente l'espace pour
+     que la lecture reste confortable même quand le QR est petit. */
+  .qr-card,
+  .ig-card {
+    gap: 1.6rem;
   }
 }
 
@@ -1701,10 +1716,23 @@ footer a:hover,
   }
 
   .hero-qr-placeholder {
-    width: 96px;
-    height: 96px;
+    width: 84px;
+    height: 84px;
     border-radius: 14px;
     padding: 5px;
+  }
+
+  /* Petit écran : on aère encore davantage le bas du hero. */
+  .hero {
+    padding-bottom: 2rem;
+  }
+
+  /* Sur très petit écran, on garde un gap raisonnable dans qr-card pour ne
+     pas casser le ratio QR/texte (passer en column rendrait la carte plus
+     haute que large et déstabiliserait le rythme vertical de la section). */
+  .qr-card,
+  .ig-card {
+    gap: 1.4rem;
   }
 
   .container {
