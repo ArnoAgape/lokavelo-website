@@ -505,8 +505,8 @@ nav a:hover,
 }
 
 .hero-qr-placeholder {
-  width: 138px;
-  height: 138px;
+  width: 150px;
+  height: 150px;
   border-radius: 20px;
   background: var(--white);
   box-shadow: 0 18px 35px rgba(18, 63, 145, 0.2);
