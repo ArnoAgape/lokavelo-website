@@ -518,6 +518,25 @@ nav a:hover,
   font-size: 0.7rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  /* Padding intérieur léger pour que le QR ne touche pas les bords arrondis. */
+  padding: 8px;
+}
+
+/* Le QR à l'intérieur doit suivre la taille du conteneur (qui varie selon
+   le viewport via les media queries). Sans ça, l'attribut `width="150"` du
+   <img> garde 150px en dur et déborde du placeholder réduit sur mobile. */
+.hero-qr-placeholder a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-qr-placeholder img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
 }
 
 /* Corrige le bouton dans les cartes CTA finales */
@@ -1610,8 +1629,10 @@ footer a:hover,
   }
 
   .hero-qr-placeholder {
-    width: 122px;
-    height: 122px;
+    width: 116px;
+    height: 116px;
+    border-radius: 18px;
+    padding: 6px;
   }
 }
 
@@ -1677,6 +1698,13 @@ footer a:hover,
   .qr-card,
   .ig-card {
     align-items: flex-start;
+  }
+
+  .hero-qr-placeholder {
+    width: 96px;
+    height: 96px;
+    border-radius: 14px;
+    padding: 5px;
   }
 
   .container {
