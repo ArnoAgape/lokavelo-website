@@ -539,6 +539,20 @@ nav a:hover,
   border-radius: 12px;
 }
 
+/* ── QR de la section "Télécharger" (en bas de page) ──
+   Plus grand que le QR du hero pour rester scannable d'un coup d'œil quand
+   le visiteur arrive sur la zone download. Le QR du hero garde sa taille
+   compacte (150px) parce qu'il est entouré de boutons CTA et de SVG ; ici
+   on a tout l'espace de la carte pour soi. */
+.qr-card .hero-qr-placeholder {
+  width: 220px;
+  height: 220px;
+  border-radius: 24px;
+  padding: 10px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
 /* Corrige le bouton dans les cartes CTA finales */
 .faq-cta-card .btn-android {
   flex-shrink: 0;
@@ -1649,6 +1663,15 @@ footer a:hover,
   .ig-card {
     gap: 1.6rem;
   }
+
+  /* Override du QR download sur tablette : reste imposant pour conserver
+     l'impact visuel mais s'adapte à la largeur réduite de la carte. */
+  .qr-card .hero-qr-placeholder {
+    width: 190px;
+    height: 190px;
+    border-radius: 22px;
+    padding: 9px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1716,8 +1739,8 @@ footer a:hover,
   }
 
   .hero-qr-placeholder {
-    width: 84px;
-    height: 84px;
+    width: 100px;
+    height: 100px;
     border-radius: 14px;
     padding: 5px;
   }
@@ -1727,12 +1750,29 @@ footer a:hover,
     padding-bottom: 2rem;
   }
 
-  /* Sur très petit écran, on garde un gap raisonnable dans qr-card pour ne
-     pas casser le ratio QR/texte (passer en column rendrait la carte plus
-     haute que large et déstabiliserait le rythme vertical de la section). */
-  .qr-card,
+  /* Sur très petit écran, on garde un gap raisonnable dans .ig-card mais on
+     passe la .qr-card en COLONNE : le QR du download est désormais grand
+     (170px) et un layout row le ferait dévorer toute la largeur, laissant
+     le texte "Google Play Store / Disponible…" écrasé à 30px de large.
+     QR centré au-dessus + texte centré en dessous : lecture confortable. */
   .ig-card {
     gap: 1.4rem;
+  }
+
+  .qr-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  /* Override du QR download sur smartphone. Reste très grand pour rester
+     lisible/scannable depuis ~30 cm. */
+  .qr-card .hero-qr-placeholder {
+    width: 170px;
+    height: 170px;
+    border-radius: 20px;
+    padding: 8px;
   }
 
   .container {
