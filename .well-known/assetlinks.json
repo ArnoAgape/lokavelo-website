@@ -1,11 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": ["delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.arnoagape.lokavelo",
       "sha256_cert_fingerprints": [
         "EA:E4:E1:89:B2:D2:F9:76:DD:41:FC:76:CF:83:CA:53:34:F9:39:79:98:0F:A5:C0:67:CC:5D:EC:17:67:46:FB"
+		"60:E3:C2:02:CE:52:D7:BD:D8:58:EF:5E:1D:28:A1:C9:8B:F0:8E:26:6F:A7:93:AF:FF:EC:3C:1A:3C:EC:21:49"
       ]
     }
   }
