@@ -797,6 +797,15 @@ nav a:hover,
   background: transparent;
 }
 
+.download-badge {
+  text-align: center;
+}
+
+.playstore-badge {
+  width: min(100%, 450px);
+  height: auto;
+}
+
 .qr-label h4,
 .ig-label h4 {
   font-size: 1rem;
