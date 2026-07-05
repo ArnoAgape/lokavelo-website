@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LokaVélo</title>
+  <title>Compte de paiement configuré — LokaVélo</title>
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <meta name="robots" content="noindex">
   <style>
-    /* Mise en page centrée verticalement pour cette page d'attente */
     .app-redirect {
       min-height: 100vh;
       padding: 112px 1.4rem 3rem;
@@ -17,7 +16,6 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
     }
     .app-redirect-content {
       max-width: 640px;
@@ -45,9 +43,6 @@
       margin-bottom: 2rem;
       line-height: 1.5;
     }
-    .app-redirect .cta-zone {
-      gap: 0.85rem;
-    }
     .app-redirect .secondary-link {
       margin-top: 0.5rem;
       font-size: 0.95rem;
@@ -74,17 +69,18 @@
 <section class="app-redirect">
   <div class="app-redirect-content">
     <img src="/ic_lokavelo_logo.png" alt="LokaVélo" class="app-redirect-icon">
-    <h1 id="hero-title">Cette page est dans l'app</h1>
-    <p id="hero-sub">
-      Télécharge LokaVélo sur Android pour accéder à cette page.
+    <h1>Compte de paiement configuré ✓</h1>
+    <p>
+      Ta configuration de paiement Stripe est terminée. Retourne dans l’application
+      LokaVélo pour recevoir les règlements de tes locations.
     </p>
 
     <div class="cta-zone">
       <a href="https://play.google.com/store/apps/details?id=com.arnoagape.lokavelo" class="btn-android">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.64.64 0 00-.83.22l-1.88 3.24A10.45 10.45 0 0012 8c-1.57 0-3.06.37-4.48 1.06L5.64 5.67a.64.64 0 00-.83-.22.61.61 0 00-.26.85l1.84 3.18C3.93 10.95 2.68 13.07 2.5 15.5h19c-.18-2.43-1.43-4.55-3.9-6.02zM9 13H7v-2h2v2zm8 0h-2v-2h2v2z"/></svg>
-        Télécharger sur Android
+        Ouvrir LokaVélo
       </a>
-      <a href="/" class="secondary-link">Retour à l'accueil</a>
+      <a href="/" class="secondary-link">Retour à l’accueil</a>
     </div>
   </div>
 </section>
@@ -102,36 +98,6 @@
     <a href="/contact">Contact</a>
   </p>
 </footer>
-
-<script>
-  // Détection du chemin pour adapter le message. Sert pour :
-  //  /rental/owner/{id}      → vue propriétaire de la location
-  //  /rental/renter/{id}     → vue locataire de la location
-  //  /rental/{id}            → fallback (raccourci historique)
-  //  /conversation/{id}      → conversation messagerie
-  //  autre                   → vrai 404 (message générique conservé)
-  (function () {
-    var path = window.location.pathname || '';
-    var titleEl = document.getElementById('hero-title');
-    var subEl = document.getElementById('hero-sub');
-
-    if (path.indexOf('/rental/owner/') === 0) {
-      titleEl.textContent = 'Ta location est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour gérer cette location en tant que propriétaire — acceptation, contre-offre, validation, paiement reçu.';
-    } else if (path.indexOf('/rental/renter/') === 0 || path.indexOf('/rental/') === 0) {
-      titleEl.textContent = 'Ta location est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour voir le détail de ta location, payer ou faire ton état des lieux.';
-    } else if (path.indexOf('/conversation/') === 0) {
-      titleEl.textContent = 'La conversation est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour échanger avec l’autre partie et garder tous tes messages en sécurité.';
-    } else {
-      // Vraie 404 — on garde un message neutre.
-      titleEl.textContent = 'Page introuvable';
-      subEl.textContent = 'Cette page n’existe pas ou a été déplacée. Reviens à l’accueil pour découvrir LokaVélo.';
-      document.title = 'Page introuvable — LokaVélo';
-    }
-  })();
-</script>
 
 </body>
 </html>
