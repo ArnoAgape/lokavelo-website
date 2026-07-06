@@ -104,12 +104,6 @@
 </footer>
 
 <script>
-  // Détection du chemin pour adapter le message. Sert pour :
-  //  /rental/owner/{id}      → vue propriétaire de la location
-  //  /rental/renter/{id}     → vue locataire de la location
-  //  /rental/{id}            → fallback (raccourci historique)
-  //  /conversation/{id}      → conversation messagerie
-  //  autre                   → vrai 404 (message générique conservé)
   (function () {
     var path = window.location.pathname || '';
     var titleEl = document.getElementById('hero-title');
