@@ -15,6 +15,10 @@
           {
             "/": "/conversation/*",
             "comment": "Lien direct vers une conversation."
+          },
+          {
+            "/": "/bike/*",
+            "comment": "Lien de partage d'un vélo."
           }
         ]
       }
