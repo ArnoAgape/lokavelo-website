@@ -58,6 +58,19 @@
       color: var(--cyan);
       text-decoration: underline;
     }
+    /* Note affichée à la place du bouton quand le store visé n'est pas
+       encore ouvert (app iPhone en cours de publication). */
+    .app-redirect .store-pending {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--deep-blue);
+      padding: 0.9rem 1.6rem;
+      border: 2px dashed rgba(23, 103, 216, 0.28);
+      border-radius: 999px;
+    }
+    .app-redirect [hidden] {
+      display: none;
+    }
   </style>
 </head>
 <body>
@@ -80,10 +93,15 @@
     </p>
 
     <div class="cta-zone">
-      <a href="https://play.google.com/store/apps/details?id=com.arnoagape.lokavelo" class="btn-android">
-        <svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.64.64 0 00-.83.22l-1.88 3.24A10.45 10.45 0 0012 8c-1.57 0-3.06.37-4.48 1.06L5.64 5.67a.64.64 0 00-.83-.22.61.61 0 00-.26.85l1.84 3.18C3.93 10.95 2.68 13.07 2.5 15.5h19c-.18-2.43-1.43-4.55-3.9-6.02zM9 13H7v-2h2v2zm8 0h-2v-2h2v2z"/></svg>
-        Télécharger sur Android
+      <!-- Bouton principal : le store de la plateforme du visiteur. Son
+           libellé, son icône et sa cible sont posés par le script ci-dessous —
+           servir un bouton « Android » à un iPhone envoyait dans le vide. -->
+      <a id="cta-primary" href="https://play.google.com/store/apps/details?id=com.arnoagape.lokavelo" class="btn-android">
+        <span id="cta-icon" aria-hidden="true"></span>
+        <span id="cta-label">Télécharger lʼapp</span>
       </a>
+      <span id="cta-pending" class="store-pending" hidden></span>
+      <a id="cta-alt" class="secondary-link" href="/"></a>
       <a href="/" class="secondary-link">Retour à lʼaccueil</a>
     </div>
   </div>
@@ -105,24 +123,91 @@
 
 <script>
   (function () {
+    /* ------------------------------------------------------------------
+       Page de repli des liens profonds.
+
+       GitHub Pages ne sait pas router `/bike/{id}` ou `/rental/owner/{id}` :
+       ces chemins n'existent pas en tant que fichiers, donc le serveur sert
+       cette page. Quand l'app est installée, le visiteur n'arrive jamais ici
+       (App Links / Universal Links l'ouvrent directement) — cette page ne
+       s'affiche donc que pour qui n'a pas encore l'app. D'où le seul contenu
+       qui a du sens : de quoi la télécharger, sur SA plateforme.
+       ------------------------------------------------------------------ */
+
+    /* À remplir le jour de la publication sur l'App Store. Tant que la chaîne
+       est vide, les visiteurs iPhone voient « bientôt disponible » plutôt
+       qu'un lien mort — c'est le seul endroit à modifier. */
+    var IOS_APP_URL = '';
+    var ANDROID_APP_URL = 'https://play.google.com/store/apps/details?id=com.arnoagape.lokavelo';
+
+    var ICON_ANDROID = '<svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85a.64.64 0 00-.83.22l-1.88 3.24A10.45 10.45 0 0012 8c-1.57 0-3.06.37-4.48 1.06L5.64 5.67a.64.64 0 00-.83-.22.61.61 0 00-.26.85l1.84 3.18C3.93 10.95 2.68 13.07 2.5 15.5h19c-.18-2.43-1.43-4.55-3.9-6.02zM9 13H7v-2h2v2zm8 0h-2v-2h2v2z"/></svg>';
+    var ICON_IOS = '<svg width="21" height="21" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.9 2.37-4.3 2.48-4.36-1.35-1.98-3.46-2.25-4.21-2.28-1.79-.18-3.5 1.05-4.41 1.05-.91 0-2.31-1.03-3.8-1-1.95.03-3.76 1.14-4.76 2.89-2.03 3.52-.52 8.73 1.46 11.59.97 1.4 2.12 2.97 3.63 2.91 1.46-.06 2.01-.94 3.77-.94 1.76 0 2.26.94 3.8.91 1.57-.03 2.56-1.42 3.52-2.83 1.11-1.62 1.57-3.19 1.59-3.27-.03-.01-3.05-1.17-3.08-4.64M14.36 3.9c.8-.98 1.35-2.33 1.2-3.68-1.16.05-2.57.78-3.4 1.75-.74.86-1.39 2.24-1.22 3.56 1.29.1 2.61-.66 3.42-1.63"/></svg>';
+
+    /* iPadOS 13+ se présente comme un Mac : le test du multi-touch le
+       démasque, sinon les iPad tomberaient dans la branche Android. */
+    function isApple() {
+      var ua = navigator.userAgent || '';
+      if (/iPhone|iPad|iPod/.test(ua)) return true;
+      return /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+    }
+
     var path = window.location.pathname || '';
     var titleEl = document.getElementById('hero-title');
     var subEl = document.getElementById('hero-sub');
 
-    if (path.indexOf('/rental/owner/') === 0) {
-      titleEl.textContent = 'Ta location est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour gérer cette location en tant que propriétaire — acceptation, contre-offre, validation, paiement reçu.';
-    } else if (path.indexOf('/rental/renter/') === 0 || path.indexOf('/rental/') === 0) {
-      titleEl.textContent = 'Ta location est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour voir le détail de ta location, payer ou faire ton état des lieux.';
+    // Ce que le visiteur cherchait, décrit sans nommer de plateforme : le
+    // bouton s'en charge.
+    if (path.indexOf('/bike/') === 0) {
+      titleEl.textContent = 'Ce vélo est dans lʼapp';
+      subEl.textContent = 'Installe LokaVélo pour voir les photos, le prix, les disponibilités — et réserver ce vélo en quelques minutes.';
+      document.title = 'Voir ce vélo — LokaVélo';
+    } else if (path.indexOf('/rental/owner/') === 0) {
+      titleEl.textContent = 'Ta location est dans lʼapp';
+      subEl.textContent = 'Ouvre LokaVélo pour gérer cette location en tant que propriétaire — acceptation, contre-offre, validation, paiement reçu.';
+    } else if (path.indexOf('/rental/') === 0) {
+      titleEl.textContent = 'Ta location est dans lʼapp';
+      subEl.textContent = 'Ouvre LokaVélo pour voir le détail de ta location, payer ou faire ton état des lieux.';
     } else if (path.indexOf('/conversation/') === 0) {
-      titleEl.textContent = 'La conversation est dans l’app';
-      subEl.textContent = 'Ouvre LokaVélo sur Android pour échanger avec l’autre partie et garder tous tes messages en sécurité.';
+      titleEl.textContent = 'La conversation est dans lʼapp';
+      subEl.textContent = 'Ouvre LokaVélo pour échanger avec lʼautre partie et garder tous tes messages en sécurité.';
     } else {
       // Vraie 404 — on garde un message neutre.
       titleEl.textContent = 'Page introuvable';
-      subEl.textContent = 'Cette page n’existe pas ou a été déplacée. Reviens à l’accueil pour découvrir LokaVélo.';
+      subEl.textContent = 'Cette page nʼexiste pas ou a été déplacée. Reviens à lʼaccueil pour découvrir LokaVélo.';
       document.title = 'Page introuvable — LokaVélo';
+    }
+
+    var primary = document.getElementById('cta-primary');
+    var pending = document.getElementById('cta-pending');
+    var alt = document.getElementById('cta-alt');
+
+    function setPrimary(url, label, icon) {
+      primary.href = url;
+      document.getElementById('cta-label').textContent = label;
+      document.getElementById('cta-icon').innerHTML = icon;
+    }
+
+    function setAlt(url, label) {
+      alt.href = url;
+      alt.textContent = label;
+    }
+
+    if (isApple()) {
+      if (IOS_APP_URL) {
+        setPrimary(IOS_APP_URL, 'Télécharger sur iPhone', ICON_IOS);
+      } else {
+        primary.hidden = true;
+        pending.hidden = false;
+        pending.textContent = 'Lʼapp iPhone arrive très bientôt';
+      }
+      setAlt(ANDROID_APP_URL, 'Tu es sur Android ? Télécharger sur Google Play');
+    } else {
+      setPrimary(ANDROID_APP_URL, 'Télécharger sur Android', ICON_ANDROID);
+      if (IOS_APP_URL) {
+        setAlt(IOS_APP_URL, 'Tu es sur iPhone ? Télécharger sur lʼApp Store');
+      } else {
+        alt.hidden = true;
+      }
     }
   })();
 </script>
