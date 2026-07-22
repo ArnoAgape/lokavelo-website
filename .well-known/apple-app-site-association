@@ -1,0 +1,23 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["4TR54NLV86.com.arnoagape.lokavelo"],
+        "components": [
+          {
+            "/": "/connect/*",
+            "comment": "Retour d'onboarding Stripe Connect (return + refresh)."
+          },
+          {
+            "/": "/rental/*",
+            "comment": "Lien direct vers une location."
+          },
+          {
+            "/": "/conversation/*",
+            "comment": "Lien direct vers une conversation."
+          }
+        ]
+      }
+    ]
+  }
+}
