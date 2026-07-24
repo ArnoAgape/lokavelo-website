@@ -966,6 +966,12 @@ nav a:hover,
   margin: 1.2rem 0 0.45rem;
 }
 
+.container > section h4 {
+  color: var(--deep-blue);
+  font-size: 0.98rem;
+  margin: 0.9rem 0 0.35rem;
+}
+
 p,
 li {
   color: var(--muted);
