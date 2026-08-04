@@ -797,7 +797,7 @@ nav a:hover,
   background: transparent;
 }
 
-.playstore-badge {
+.store-badge {
   width: min(100%, 250px);
   height: auto;
 }
