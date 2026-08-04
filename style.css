@@ -756,6 +756,17 @@ nav a:hover,
   gap: 1rem;
 }
 
+/* Badge Google Play : l'image source fait 2145 px de large. Sans cette
+   contrainte elle s'affichait à sa taille native et débordait tout le bas de
+   page. On la borne à une largeur de badge classique, hauteur auto pour garder
+   le ratio, et max-width pour ne jamais dépasser sur mobile. */
+.playstore-badge {
+  display: block;
+  width: 200px;
+  height: auto;
+  max-width: 100%;
+}
+
 .qr-card,
 .ig-card {
   background: rgba(255, 255, 255, 0.78);
