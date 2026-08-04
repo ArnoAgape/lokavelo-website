@@ -80,6 +80,7 @@ h3,
 h4,
 nav a,
 .btn-android,
+.btn-ios,
 .btn-primary,
 .btn-secondary,
 .section-eyebrow,
@@ -415,6 +416,7 @@ nav a:hover,
 }
 
 .btn-android,
+.btn-ios,
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
@@ -472,6 +474,27 @@ nav a:hover,
   text-decoration: none;
 }
 
+/* Bouton App Store — convention Apple : noir/sombre. Même gabarit que
+   .btn-android (hauteur, padding, rayon via la règle partagée ci-dessus),
+   mais sans les antennes ::before/::after propres au robot Android. */
+.btn-ios {
+  min-height: 58px;
+  background: linear-gradient(135deg, #2b2b2e, #000000);
+  color: var(--white);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  padding: 0.9rem 2.4rem;
+  gap: 10px;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.32);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-ios:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.42);
+  color: var(--white);
+  text-decoration: none;
+}
+
 .btn-primary,
 .btn-secondary {
   min-height: 46px;
@@ -500,6 +523,7 @@ nav a:hover,
 .scan-note {
   font-family: 'Aptos Display', 'Aptos', sans-serif;
   font-weight: 700;
+  flex-direction: row;
   color: var(--blue);
   font-size: 1rem;
 }
@@ -752,7 +776,7 @@ nav a:hover,
 
 .dl-cards {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
 }
 
