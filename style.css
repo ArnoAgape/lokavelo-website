@@ -760,7 +760,7 @@ nav a:hover,
    contrainte elle s'affichait à sa taille native et débordait tout le bas de
    page. On la borne à une largeur de badge classique, hauteur auto pour garder
    le ratio, et max-width pour ne jamais dépasser sur mobile. */
-.playstore-badge {
+.store-badge {
   display: block;
   width: 200px;
   height: auto;
