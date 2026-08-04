@@ -431,6 +431,7 @@ nav a:hover,
 .btn-android,
 .btn-ios,
 .btn-primary,
+.btn-index,
 .btn-secondary {
   display: inline-flex;
   align-items: center;
@@ -451,6 +452,24 @@ nav a:hover,
   gap: 10px;
   box-shadow: 0 16px 34px rgba(130, 188, 0, 0.32);
   transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-index {
+  min-height: 58px;
+  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  color: var(--white);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  padding: 0.9rem 2.4rem;
+  gap: 10px;
+  box-shadow: 0 16px 34px rgba(130, 188, 0, 0.32);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-index:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 42px rgba(130, 188, 0, 0.42);
+  color: var(--white);
+  text-decoration: none;
 }
 
 .btn-android:hover {
