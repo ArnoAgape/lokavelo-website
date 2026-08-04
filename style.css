@@ -472,6 +472,31 @@ nav a:hover,
   text-decoration: none;
 }
 
+.btn-index::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 34px;
+  height: 18px;
+  border-top: 3px solid var(--cyan);
+  border-bottom: 3px solid transparent;
+  opacity: 0.72;
+}
+
+.btn-index::before {
+  right: calc(100% + 18px);
+  transform: translateY(-50%) rotate(18deg);
+  border-left: 3px solid var(--cyan);
+  border-radius: 18px 0 0 0;
+}
+
+.btn-index::after {
+  left: calc(100% + 18px);
+  transform: translateY(-50%) rotate(-18deg);
+  border-right: 3px solid var(--cyan);
+  border-radius: 0 18px 0 0;
+}
+
 .btn-android:hover {
   transform: translateY(-3px);
   box-shadow: 0 20px 42px rgba(130, 188, 0, 0.42);
