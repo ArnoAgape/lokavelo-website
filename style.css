@@ -444,45 +444,18 @@ nav a:hover,
 
 .btn-android {
   min-height: 58px;
-  background: linear-gradient(135deg, var(--blue), var(--cyan));
+  background: #82bc00;
   color: var(--white);
   font-size: clamp(1rem, 2vw, 1.15rem);
   padding: 0.9rem 2.4rem;
   gap: 10px;
-  box-shadow: 0 16px 34px rgba(22, 199, 238, 0.28);
-  position: relative;
+  box-shadow: 0 16px 34px rgba(130, 188, 0, 0.32);
   transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-android::before,
-.btn-android::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  width: 34px;
-  height: 18px;
-  border-top: 3px solid var(--cyan);
-  border-bottom: 3px solid transparent;
-  opacity: 0.72;
-}
-
-.btn-android::before {
-  right: calc(100% + 18px);
-  transform: translateY(-50%) rotate(18deg);
-  border-left: 3px solid var(--cyan);
-  border-radius: 18px 0 0 0;
-}
-
-.btn-android::after {
-  left: calc(100% + 18px);
-  transform: translateY(-50%) rotate(-18deg);
-  border-right: 3px solid var(--cyan);
-  border-radius: 0 18px 0 0;
 }
 
 .btn-android:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 42px rgba(22, 199, 238, 0.38);
+  box-shadow: 0 20px 42px rgba(130, 188, 0, 0.42);
   color: var(--white);
   text-decoration: none;
 }
@@ -594,12 +567,6 @@ nav a:hover,
 .faq-cta-card .btn-android {
   flex-shrink: 0;
   margin-left: auto;
-}
-
-/* Retire les petites décorations latérales uniquement dans les CTA finales */
-.faq-cta-card .btn-android::before,
-.faq-cta-card .btn-android::after {
-  display: none;
 }
 
 /* ───────────────────────── HOME SECTIONS ───────────────────────── */
@@ -790,22 +757,24 @@ nav a:hover,
 .dl-cards {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
-/* Badge Google Play : l'image source fait 2145 px de large. Sans cette
-   contrainte elle s'affichait à sa taille native et débordait tout le bas de
-   page. On la borne à une largeur de badge classique, hauteur auto pour garder
-   le ratio, et max-width pour ne jamais dépasser sur mobile. */
+/* Badges des stores : les deux images ont le même ratio (2145×703). On les
+   dimensionne par la HAUTEUR pour qu'ils s'alignent exactement l'un à côté de
+   l'autre et avec la pastille Instagram ; largeur auto garde le ratio,
+   max-width évite tout débordement sur mobile. */
 .store-badge {
   display: block;
-  width: 200px;
-  height: auto;
+  height: 64px;
+  width: auto;
   max-width: 100%;
 }
 
-.qr-card,
-.ig-card {
+.qr-card {
   background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(255, 255, 255, 0.95);
   border-radius: 26px;
@@ -845,11 +814,6 @@ nav a:hover,
   background: transparent;
 }
 
-.store-badge {
-  width: min(100%, 250px);
-  height: auto;
-}
-
 .qr-label h4,
 .ig-label h4 {
   font-size: 1rem;
@@ -864,32 +828,48 @@ nav a:hover,
   margin: 0;
 }
 
+/* Pastille Instagram : même HAUTEUR que les badges (64px) pour s'aligner dans
+   la rangée, sans le gros contour blanc de l'ancienne carte qui « faisait
+   tache ». Fond sombre discret pour rappeler un badge de store. */
 .ig-card {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 64px;
+  padding: 0 1.1rem 0 0.7rem;
+  border-radius: 14px;
+  background: #1b1b1f;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
   text-decoration: none;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .ig-card:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.28);
   text-decoration: none;
 }
 
 .ig-icon {
-  width: 54px;
-  height: 54px;
+  width: 36px;
+  height: 36px;
   background: var(--white);
-  border-radius: 17px;
+  border-radius: 10px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 0 0 1px rgba(23, 103, 216, 0.08);
 }
 
 .ig-icon svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Texte de la pastille : blanc sur fond sombre. */
+.ig-label h4 {
+  color: var(--white);
+  margin: 0;
 }
 
 /* ───────────────────────── LEGAL & CONTACT PAGES ───────────────────────── */
@@ -1785,11 +1765,6 @@ footer a:hover,
   }
 
   .feat-pill span {
-    display: none;
-  }
-
-  .btn-android::before,
-  .btn-android::after {
     display: none;
   }
 
