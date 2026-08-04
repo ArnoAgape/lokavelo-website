@@ -173,6 +173,11 @@ nav a:hover,
   display: flex;
   align-items: center;
   gap: 7px;
+  /* Vrai dégradé Instagram (orange → rouge → rose → violet), qui remplace le
+     bleu/cyan hérité de la règle partagée avec .nav-pill. */
+  background: linear-gradient(45deg,
+    #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  box-shadow: 0 10px 24px rgba(220, 39, 67, 0.28);
 }
 
 .nav-ig:hover,
@@ -461,17 +466,23 @@ nav a:hover,
   font-size: clamp(1rem, 2vw, 1.15rem);
   padding: 0.9rem 2.4rem;
   gap: 10px;
-  box-shadow: 0 16px 34px rgba(130, 188, 0, 0.32);
+  /* Ombre bleue assortie au bouton (et non verte). */
+  box-shadow: 0 16px 34px rgba(22, 199, 238, 0.28);
+  /* Nécessaire pour ancrer les vagues (position: absolute) sur le bouton. */
+  position: relative;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .btn-index:hover {
   transform: translateY(-3px);
-  box-shadow: 0 20px 42px rgba(130, 188, 0, 0.42);
+  box-shadow: 0 20px 42px rgba(22, 199, 238, 0.38);
   color: var(--white);
   text-decoration: none;
 }
 
+/* Base commune des DEUX vagues. Avant, seule `::after` portait le `content`
+   et la forme → la vague gauche (`::before`) ne s'affichait jamais. */
+.btn-index::before,
 .btn-index::after {
   content: '';
   position: absolute;
@@ -483,6 +494,7 @@ nav a:hover,
   opacity: 0.72;
 }
 
+/* Vague GAUCHE. */
 .btn-index::before {
   right: calc(100% + 18px);
   transform: translateY(-50%) rotate(18deg);
@@ -490,6 +502,7 @@ nav a:hover,
   border-radius: 18px 0 0 0;
 }
 
+/* Vague DROITE. */
 .btn-index::after {
   left: calc(100% + 18px);
   transform: translateY(-50%) rotate(-18deg);
