@@ -35,7 +35,7 @@
     <ol>
       <li><a href="#locataire">Locataire</a>
         <ol>
-          <li><a href="#loc-trouver">Trouver &amp; réserver un vélo</a></li>
+          <li><a href="#loc-trouver">Chercher &amp; réserver un vélo</a></li>
           <li><a href="#loc-paiement">Paiement, frais &amp; caution</a></li>
           <li><a href="#loc-inspection">Remise du vélo</a></li>
           <li><a href="#loc-pendant">Pendant la location</a></li>
@@ -45,7 +45,7 @@
       </li>
       <li><a href="#proprietaire">Propriétaire</a>
         <ol>
-          <li><a href="#pro-publier">Publier mon vélo</a></li>
+          <li><a href="#pro-publier">Ajouter un vélo</a></li>
           <li><a href="#pro-demandes">Gérer les demandes</a></li>
           <li><a href="#pro-inspection">Remise du vélo</a></li>
           <li><a href="#pro-restitution">Pendant la location &amp; Restitution du vélo</a></li>
@@ -207,15 +207,19 @@
 	  <div class="faq-a">
 		<p>Tu peux demander une prolongation depuis l’écran de la location, le prix est recalculé automatiquement. 
 		La modification reste soumise à l’accord du propriétaire.</p>
+		<div class="faq-shot">
+		<img src="images/ss_prolongation_1.png" alt="écran de prolongation de la location">
+		<img src="images/ss_prolongation_2.png" alt="écran de prolongation de la location">
+		</div>
 	  </div>
 	</details>
 
-    <h3 id="loc-restitution">État des lieux de fin de location (Restitution du vélo)</h3>
+    <h3 id="loc-restitution">Restitution du vélo</h3>
     <details class="faq-q">
       <summary>Comment terminer la location ?</summary>
       <div class="faq-a">
         <p>Le jour de la fin de location, retrouve le propriétaire pour lui rendre le vélo. 
-		Dans l’application, appuie sur « Valider la restitution », prends quelques photos et ajoute des remarques si besoin. 
+		Dans l’application, appuie sur <strong>Valider la restitution</strong>, prends quelques photos et ajoute des remarques si besoin. 
 		Le propriétaire fait ensuite la même chose de son côté. 
 		Ces deux états des lieux permettent de vérifier ensemble que tout est conforme et de clôturer la location en toute confiance. 
 		Tu as jusqu’au lendemain midi après la fin de la location pour effectuer cette restitution.</p>
@@ -265,16 +269,16 @@
 
   <section id="proprietaire">
     <h2>Propriétaire</h2>
-    <p>De la publication de l’annonce au versement, en passant par la caution.</p>
+    <p>De la publication de l’annonce au versement du paiement, en passant par la caution.</p>
 
     <h3 id="pro-publier">Ajouter un vélo</h3>
     <details class="faq-q" open>
       <summary>Comment ajouter un vélo ?</summary>
       <div class="faq-a">
-        <p>Sur l’application, appuie sur le menu « Mes vélos » puis sur le bouton « + ». 
+        <p>Sur l’application, appuie sur le bouton de la barre de navigation <strong>Mes vélos</strong> ➡️ <strong>+</strong>. 
 		Sur l’écran, tu dois ajouter au moins une photo, un titre et une description, les caractéristiques de ton vélo, 
 		l’adresse où se situe le vélo, tes tarifs, la durée minimale de location et le montant de la caution. 
-		Pour t’aider à remplir les champs, un guide de remplissage est disponible en appuyant sur le « ? » en haut à droite de l’écran.</p>
+		Pour t’aider à remplir les champs, un guide de remplissage est disponible en appuyant sur le <strong>?</strong> en haut à droite de l’écran.</p>
         <div class="faq-shot">
 		<img src="images/ss_ajout_vide.png" alt="écran d’ajout de vélo">
 		<img src="images/ss_ajout_1.png" alt="écran d’ajout de photos et des caractéristiques du vélo">
@@ -293,10 +297,10 @@
       </div>
     </details>
     <details class="faq-q">
-	  <summary>Comment indiquer que mon vélo n'est pas disponible ?</summary>
+	  <summary>Comment indiquer que mon vélo n’est pas disponible ?</summary>
 	  <div class="faq-a">
 		<p>Pour l’instant, LokaVélo n’a pas de calendrier de disponibilité intégré. 
-		Pour une indisponibilité prolongée, décoche la case « Disponible actuellement ? » sur la fiche de ton vélo : il n’apparaîtra plus dans les recherches. 
+		Pour une indisponibilité prolongée, décoche la case <strong>Disponible actuellement ?</strong> sur la fiche de ton vélo : il n’apparaîtra plus dans les recherches. 
 		Pour une demande ponctuelle qui ne te convient pas (dates, durée…), refuse-la simplement depuis l’application en indiquant le motif au locataire. 
 		Dès qu’une location est confirmée sur certaines dates, le vélo disparaît automatiquement des recherches sur cette période.</p>
 	  </div>
@@ -312,7 +316,7 @@
         <ul>
           <li><strong>Accepter</strong> aux conditions proposées par le locataire.</li>
           <li><strong>Refuser</strong>, en indiquant un motif au locataire pour rester transparent.</li>
-          <li><strong>Faire une contre-offre</strong> avec un autre prix, que le locataire est libre d’accepter ou non.</li>
+          <li><strong>Faire une offre</strong> avec un autre prix, que le locataire est libre d’accepter ou non.</li>
         </ul>
 
         <p>La location n’est confirmée qu’une fois le paiement effectué par le locataire — n’attends pas trop longtemps pour répondre, ta réactivité fait toute la différence !</p>
@@ -337,29 +341,22 @@
       </div>
     </details>
 
-    <h3 id="pro-inspection">Remise du vélo (Inspection du vélo)</h3>
-    <details class="faq-q">
-      <summary>Quand puis-je faire l’inspection ?</summary>
+    <h3 id="pro-inspection">Remise du vélo (Inspection)</h3>
+	<details class="faq-q">
+      <summary>Comment bien préparer la remise du vélo ?</summary>
       <div class="faq-a">
-        <p>L’inspection devient disponible <strong>la veille du jour de début, à partir de 17h00 (heure de Paris)</strong>.</p>
-
-        <p>Avant ce créneau, le bouton « Démarrer l’inspection » reste désactivé. Le locataire soumet d’abord son propre état des lieux ; il ne te reste plus qu’à le valider à ton tour côté propriétaire.</p>
-      </div>
-    </details>
-    <details class="faq-q">
-      <summary>Que faire avant l’inspection du vélo ?</summary>
-      <div class="faq-a">
-        <p>Prends quelques minutes pour préparer ton vélo et l’échange avec le locataire :</p>
+        <p>Avant de remettre le vélo au locataire, pense à vérifier le bon fonctionnement de ce dernier :</p>
         <ul>
           <li>Vérifie l’état général : freins, pneus, transmission, éclairage.</li>
-          <li>Signale les défauts connus pour qu’ils soient documentés dès le départ.</li>
-          <li>Explique le fonctionnement, en particulier s’il s’agit d’un vélo électrique (autonomie, niveaux d’assistance, recharge).</li>
-          <li>Précise la marche à suivre en cas de crevaison ou de panne mineure.</li>
+          <li>Signale les défauts connus au locataire pour éviter les mauvaises surprises.</li>
+          <li>Si tu loues un vélo électrique, explique au locataire les spécificités de ce dernier (autonomie, niveaux d’assistance, recharge).</li>
+          <li>Précise la marche à suivre en cas de crevaison ou de petite panne.</li>
         </ul>
 
         <p>C’est aussi un bon moment pour installer une relation de confiance avec ton locataire.</p>
       </div>
     </details>
+
     <details class="faq-q">
       <summary>Comment se passe l’inspection du vélo ?</summary>
       <div class="faq-a">
@@ -374,6 +371,16 @@
 		</div>
       </div>
     </details>
+	
+	<details class="faq-q">
+      <summary>À partir de quand peut-on faire l’inspection du vélo ?</summary>
+      <div class="faq-a">
+        <p>L’inspection devient disponible <strong>la veille du jour de début, à partir de 17h00 (heure de Paris)</strong>.</p>
+
+        <p>Avant ce créneau, le bouton <strong>Démarrer l’inspection</strong> reste désactivé. Le locataire soumet d’abord son propre état des lieux ; il ne te reste plus qu’à le valider à ton tour côté propriétaire.</p>
+      </div>
+    </details>
+	
     <details class="faq-q">
       <summary>Dois-je fournir un antivol ?</summary>
       <div class="faq-a">
@@ -406,7 +413,7 @@
     <details class="faq-q">
       <summary>Quand puis-je valider la restitution ?</summary>
       <div class="faq-a">
-        <p>La fenêtre de restitution s’ouvre <strong>le jour de fin de la location, à 00h00 (heure de Paris)</strong>, et reste ouverte jusqu’au lendemain à 12h00 (tolérance pour les rendus du matin).</p>
+        <p>La fenêtre de restitution s’ouvre <strong>le jour de fin de la location, à minuit (heure de Paris)</strong>, et reste ouverte jusqu’au lendemain à 12h00 (tolérance pour les rendus du matin).</p>
 
         <p>Le locataire soumet d’abord son état des lieux de sortie. Une fois qu’il l’a fait, tu reçois une notification pour valider à ton tour.</p>
       </div>
@@ -414,21 +421,25 @@
     <details class="faq-q">
       <summary>Comment se passe la restitution ?</summary>
       <div class="faq-a">
-        <p>À la restitution, tu vérifies l’état du vélo avec le locataire et tu indiques ta décision sur la caution : <strong>libération totale</strong>, <strong>retenue partielle</strong> ou <strong>retenue totale justifiée</strong>.</p>
-
-        <p>Ta décision est appliquée immédiatement, et le règlement de la location est déclenché dans la foulée vers ton compte.</p>
+        <p>À la restitution, vérifie attentivement l’état du vélo avec le locataire et décide que faire de la caution : <strong>libérer intégralement</strong>, <strong>capturer partiellement</strong> ou <strong>capturer intégralement</strong>.</p>
+		<p>Si tu décides de <strong>capturer partiellement</strong> ou de <strong>capturer intégralement</strong> la caution, tu devras justifier ta décision. Le locataire devra en être informé.</p>
+        <p>Selon la décision, le montant de la caution sera reversée au locataire ou te sera reversée dans un délai de 5 à 10 jours ouvrés.</p>
         <div class="faq-shot">
 		<img src="images/ss_restitution_proprietaire.png" alt="écran de restitution du propriétaire">
-		<img src="images/ss_restitution_proprietaire_2.png" alt="deuxième écran de restitution du propriétaire">
+		<img src="images/ss_restitution_proprietaire_2.png" alt="deuxième écran de restitution du propriétaire"></div>
+		<div class="faq-shot">
+		<img src="images/ss_caution_1.png" alt="écran de caution libérée">
+		<img src="images/ss_caution_2.png" alt="écran de caution partiellement libérée">
+		<img src="images/ss_caution_3.png" alt="écran de caution non libérée">
 		</div>
       </div>
     </details>
     <details class="faq-q">
       <summary>Que faire si le locataire ne rend pas le vélo ?</summary>
       <div class="faq-a">
-        <p>Commence par contacter le locataire via la messagerie : un retard de quelques heures n’est pas forcément une non-restitution.</p>
+        <p>Commence par contacter le locataire via la messagerie : un retard de quelques heures n’est pas forcément synonyme de non-restitution.</p>
 
-        <p>Si la situation se confirme passées <strong>2 heures après l’heure de fin prévue</strong>, un bouton <strong>« Signaler une non-restitution »</strong> apparaît sur l’écran de la location. Tu peux y joindre un motif et des photos pour appuyer ton signalement.</p>
+        <p>Si la situation se confirme passées <strong>2 heures après l’heure de fin prévue</strong>, un bouton <strong>Signaler une non-restitution</strong> apparaît sur l’écran de la location. Tu peux y joindre un motif et des photos pour appuyer ton signalement.</p>
 
         <p>Le locataire reçoit alors un délai de <strong>24 heures</strong> pour réagir : restituer le vélo ou nous contacter. Passé ce délai sans action de sa part, <strong>la caution est prélevée intégralement</strong> et reversée sur ton compte, sans démarche supplémentaire de ta part.</p>
 
@@ -524,7 +535,7 @@
       <div class="faq-a">
         <p>Oui, mais cela impacte le locataire : en cas d’annulation par le propriétaire, <strong>le locataire est intégralement remboursé</strong>, frais de service inclus.</p>
 
-        <p>Pense à le prévenir par la messagerie en expliquant la raison — c’est toujours plus apprécié qu’une annulation brutale.</p>
+        <p>Pense à le prévenir par la messagerie en expliquant la raison — c’est toujours plus appréciable qu’une annulation brutale.</p>
         <div class="faq-shot">
 		<img src="images/ss_annulation_1.png" alt="écran d’annulation">
 		<img src="images/ss_annulation_2.png" alt="deuxième écran d’annulation">
@@ -602,7 +613,7 @@
       <summary>J’ai oublié mon mot de passe.</summary>
       <div class="faq-a">
         <p>Appuie sur <strong>Mot de passe oublié</strong> sur l’écran de connexion pour recevoir un email de réinitialisation.
-		Tu peux aussi réinitialiser ton mot de passe depuis l'écran <strong>Compte</strong> ➡️ <strong>Paramètres du compte</strong> ➡️ <strong>Changer le mot de passe</strong></p>
+		Tu peux aussi réinitialiser ton mot de passe depuis l’écran <strong>Compte</strong> ➡️ <strong>Paramètres du compte</strong> ➡️ <strong>Changer le mot de passe</strong></p>
         <div class="faq-shot">
 		<img src="images/ss_mdp_oublie.png" alt="écran de connexion">
 		<img src="images/ss_mdp_oublie_2.png" alt="écran de changement du mot de passe"></div>
@@ -612,7 +623,7 @@
       <summary>Comment supprimer mon compte ?</summary>
       <div class="faq-a">
         <p>Tu souhaites nous quitter ? Nous sommes tristes de savoir que tu veux partir, mais nous respectons ton choix. 
-		Appuie sur le bouton <strong>Compte</strong> depuis la barre de navigation puis ➡️ <strong>Paramètres du compte</strong> et enfin ➡️ <strong>Supprimer le compte</strong>. 
+		Appuie sur le bouton <strong>Compte</strong> depuis la barre de navigation puis ➡️ <strong>Paramètres du compte</strong> ➡️ <strong>Supprimer le compte</strong>. 
 		Toutes les données de ton compte seront supprimées de manière définitive. 
 		Si tu as une ou des locations en cours, tu devras les terminer avant de pouvoir supprimer ton compte.</p>
         <div class="faq-shot">
@@ -625,7 +636,7 @@
 
   <section id="contact-faq">
     <h2>Encore une question ?</h2>
-    <p>Une question sur une location, un paiement, une caution ou ton compte ? Contacte LokaVélo !</p>
+    <p>Une question sur une location, un paiement, une caution ou sur ton compte ? Contacte LokaVélo !</p>
     <div class="contact-actions">
       <a href="contact" class="btn-primary">Contact</a>
     </div>
