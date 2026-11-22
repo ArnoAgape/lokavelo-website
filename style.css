@@ -572,6 +572,23 @@ nav a:hover,
   gap: 6px;
 }
 
+/* Bascule mobile / ordinateur des boutons de téléchargement. On se base
+   sur la présence d'une souris plutôt que sur la largeur : une tablette ou
+   un téléphone en paysage garde le OneLink. */
+.cta-buttons.cta-desktop {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .cta-buttons.cta-mobile {
+    display: none;
+  }
+
+  .cta-buttons.cta-desktop {
+    display: flex;
+  }
+}
+
 .btn-primary,
 .btn-secondary {
   min-height: 46px;
